@@ -41,7 +41,7 @@ Smoothie@2025
 
 6. In the **Choose data** screen, you can select the tables to be mirrored into Fabric, then select the checkbox **Automatically mirror future tables** and click on **Connect** button.
 
-![Task-6.1_9.png](media/labMedia/Task-6.1_9.png)
+    ![Task-6.1_9.png](media/labMedia/Task-6.1_9.png)
 
 7. In the name field, enter **Mirrored_SalesDb1** and click on **Create mirrored database** button.
 
