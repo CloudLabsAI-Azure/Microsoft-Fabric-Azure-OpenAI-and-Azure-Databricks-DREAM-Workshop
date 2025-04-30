@@ -1,1 +1,1 @@
-# Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop
+# 01-Lab423_Elevate-your-data-workflow-with-Microsoft-Fabric-Copilot-and-Azure-Databricks
