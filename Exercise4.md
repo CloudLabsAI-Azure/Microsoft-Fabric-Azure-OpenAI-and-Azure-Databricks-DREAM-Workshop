@@ -168,11 +168,9 @@ Query Thermostat Data in Near Real-time using KQL Script
 >**Note:** If **Welcome to KQL Queryset!** pup-up appears click on **Not Now** or close the pop-up.
 
 4. Place your cursor inside the **query** field, select all using **Ctrl + A** and **delete** the pre-written query.
-
 ![task-5.3.5.png](media/labMedia/task-5.3.5.png)
 
 5. Click on the **Copilot** button.
-
 ![eventhouse11.png](media/labMedia/eventhouse11.png)
 
 6. **Paste** the query provided below in the Copilot query section.
@@ -188,11 +186,9 @@ Create a query to summarize average temperature every 1 min in line chart
 >**Note:** The responses from Copilot may not match the ones in the screenshot but will provide a similar response. 
 
 8. Click on the **Insert** button.
-
 ![kqlqueyset1.png](media/labMedia/kqlqueyset1.png)
 
 9. Place you cursor in the **script field**, click on the **Run** button and you get the desired result.
-
 ![task-5.3.8.png](media/labMedia/task-5.3.8.png)
 
 Imagine one of the aisles had a sudden rise in temperature due to an anomaly. Customers start leaving that aisle and the wait times in the checkout lines start to increase but thanks to the KQL Queries, those anomalies would be tracked, and immediately notifications would be generated to bring the aisle temperature back to optimal levels!
