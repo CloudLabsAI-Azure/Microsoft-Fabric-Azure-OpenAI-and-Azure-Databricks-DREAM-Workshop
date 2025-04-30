@@ -45,10 +45,9 @@ Smoothie@2025
 
 7. In the name field, enter **Mirrored_SalesDb1** and click on **Create mirrored database** button.
 
-```
-Mirrored_SalesDb1
-```
-
+    ```
+    Mirrored_SalesDb1
+    ```
 ![Task-6.1_9.1.png](media/labMedia/Task-6.1_9.1.png)
 
 
