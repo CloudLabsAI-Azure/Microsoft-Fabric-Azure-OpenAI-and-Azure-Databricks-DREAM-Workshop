@@ -30,17 +30,17 @@ In this exercise, you will act as the Data Engineer, Eva, to transfer Contoso's 
 
 2. Sign in with your Azure AD credentials. If you are not already signed in, you will be redirected to the Microsoft Fabric login page.
 
-    >**Note:** Close any pop-up that appears on the screen.
+>**Note:** Close any pop-up that appears on the screen.
 
-    ![](media/labMedia/image%20(5).png)
+![](media/labMedia/image%20(5).png)
 
 3. From the left navigation pane, click on **Workspaces** and then the **+ New workspace** button.
 
-    ![task-1.1.2.png](media/labMedia/task-1.1.2.png)
+![task-1.1.2.png](media/labMedia/task-1.1.2.png)
 
 4. Type the name **<inject key= "WorkspaceName" enableCopy="true"/>**, **validate** the availability of the name, and click on **Advanced**.
 
-    >**Note:** Only use the workspace name provided above.
+>**Note:** Only use the workspace name provided above.
 
 >**NOTE:** If the name **<inject key= "WorkspaceName" enableCopy="false"/>** is already taken, refresh the page and check again. A workspace with that name may already be created. If so, add a different suffix until the name is available.
 
@@ -48,7 +48,7 @@ In this exercise, you will act as the Data Engineer, Eva, to transfer Contoso's 
 
 5. Ensure **Fabric capacity** is enabled, verify that **fabric...- North Central US** is selected under **Capacity**, and then click **Apply**.
 
-    ![works-apply.png](./media/labMedia/workspace02.png)
+![works-apply.png](./media/labMedia/workspace02.png)
 
 >**Note:** Close any pop-up that appears on the screen.
 
@@ -60,26 +60,26 @@ In this exercise, you will act as the Data Engineer, Eva, to transfer Contoso's 
 
 ### Create/Build a Lakehouse
 
-  Now, let's see how each department can easily create a Lakehouse in the Contoso workspace without any provision. They simply provide a name, given the proper access rights of course!
+Now, let's see how each department can easily create a Lakehouse in the Contoso workspace without any provision. They simply provide a name, given the proper access rights of course!
 
-  >**Note:** Verify that you are in the **<inject key= "WorkspaceName" enableCopy="false"/>** **Workspace** created in the earlier steps.
+>**Note:** Verify that you are in the **<inject key= "WorkspaceName" enableCopy="false"/>** **Workspace** created in the earlier steps.
 
 1. Click on **+ New item** button.
    
-    ![task-wb1.png](media/labMedia/lhnew-item.png)
+![task-wb1.png](media/labMedia/lhnew-item.png)
 
 2. In the pop-up window search for **Lakehouse** in the search bar and click on **Lakehouse**.
 
-    ![task-wb2.png](media/labMedia/lakehousesearch.png)
+![task-wb2.png](media/labMedia/lakehousesearch.png)
 
 3. Copy the name **lakehouse** from the following and paste it in the **Name** field.
 
-    ```BASH
-    lakehouse
-    ```
+```BASH
+lakehouse
+```
 4. Click on the **Lakehouse schemas** checkbox and then click on the **Create** button.
 
-    ![task-1.2.3.png](media/labMedia/task-1.2.3.png)
+![task-1.2.3.png](media/labMedia/task-1.2.3.png)
 
 
 In just a few seconds, the Lakehouse is ready. With the right access, you, as a Data Engineer, can effortlessly create a new Lakehouse. There is no need to set up any storage accounts or worry about network, infrastructure, key vault, Azure subscriptions, etc.
@@ -101,7 +101,7 @@ Now, this is something exciting! This section shows how easy it is to create Sho
 
 3. In the pop-up window, under **External sources**, select the **Azure Data Lake Storage Gen2** source.
 
-    ![task-1.3-ext-shortcut4.png](media/labMedia/task-1.3-ext-shortcut4.png)
+![task-1.3-ext-shortcut4.png](media/labMedia/task-1.3-ext-shortcut4.png)
 
 >**Note:** Wait for the screen to load.
 
@@ -109,25 +109,25 @@ Now, this is something exciting! This section shows how easy it is to create Sho
 
 5. In the following screen, we need to enter the connection details for the ADLS Gen2 shortcut.
 
-    ![shortcut111.png](media/labMedia/task-1.3-ext-shortcut-11u.png)
+![shortcut111.png](media/labMedia/task-1.3-ext-shortcut-11u.png)
 
 6. Copy the **Data Lake Storage endpoint**: **<inject key= "storageEndpoint" enableCopy="true"/>** and paste it into the **URL** field.
 
 7. Select **Organization account** in the **Authentication Kind**, and ensure you are signed in and click on **Next**.
 
-    ![shortcut111.png](media/labMedia/task-1.3-ext-shortcut-111u.png)
+![shortcut111.png](media/labMedia/task-1.3-ext-shortcut-111u.png)
 
 8. Select the **data** and **litwaredata** checkbox and then Click on the **Next** button.
 
-    ![task-wb6.png](media/labMedia/task-wb6.png)
+![task-wb6.png](media/labMedia/task-wb6.png)
 
 9. Click on the **Create** button.
 
-    ![task-1.3-ext-shortcut10.png](media/labMedia/task-1.3-ext-shortcut10.png)
+![task-1.3-ext-shortcut10.png](media/labMedia/task-1.3-ext-shortcut10.png)
 
 10. And there you go! Your shortcut is now ready! We can see the newly created shortcut named **litwaredata** and **data**.
 
-    ![task-wb7.png](media/labMedia/64.1.png)
+![task-wb7.png](media/labMedia/64.1.png)
 
 Prior to Microsoft Fabric, departments in Contoso had to move the data they needed from other departments via time-consuming ETL processes. But look, now they have created shortcuts. No need to move any of this data. That is the power of OneLake!
 
@@ -137,23 +137,23 @@ Now, let’s see how Data Engineer, Eva, got the remaining data into OneLake by 
 
 1. Click on Workspace **<inject key= "WorkspaceName" enableCopy="false"/>** and select **New item**.
 
-    ![task-wb8S.png](media/labMedia/64.2.png)
+![task-wb8S.png](media/labMedia/64.2.png)
 
 2. In the **New Item** tab, scroll down and click on **Notebook**
 
-    ![task-wb8S.png](media/labMedia/64.3.png)
+![task-wb8S.png](media/labMedia/64.3.png)
 
-    >**Note:**  If the **Pop-up** appears click on **Skip tour**
+>**Note:**  If the **Pop-up** appears click on **Skip tour**
  
-    ![task-wb8S.png](media/labMedia/64.4.png)
+![task-wb8S.png](media/labMedia/64.4.png)
 
 3. Click on the **Add data items** button and then select **Existing data sources** from the dropdown.
 
-    ![task-wb8S.png](media/labMedia/additem041.png)
+![task-wb8S.png](media/labMedia/additem041.png)
 
 4. Select the **lakehouse** and then click on **Connect** button.
 
-    ![lakehouseconnect.png](media/labMedia/lakehouseconnect.png)
+![lakehouseconnect.png](media/labMedia/lakehouseconnect.png)
 
 5. Once the notebook is created, paste the **below code** in the existing cell and run the cell by clicking on the **Run cell** icon.
 
@@ -180,15 +180,15 @@ for file in csv_files:
 7. Click on the Stop icon in the ribbon at the top to **Stop the Spark session**.
 8. Click on **Lakehouse** in the left navigation bar.
 
-    ![task-wb8S.png](media/64.9.png)
+![task-wb8S.png](media/64.9.png)
 
 9. Expand **Tables** and expand **dbo** under Tables. Click on the **three dots** (Ellipses) next to dbo and click **Refresh** from dropdown options.
 
-    ![task-wb8S.png](media/labMedia/64.10.1.png)
+![task-wb8S.png](media/labMedia/64.10.1.png)
 
 10. View the successfully **loaded tables**.
 
-    ![task-wb8S.png](media/labMedia/64.10.png)
+![task-wb8S.png](media/labMedia/64.10.png)
 
 11. Click on **website_bounce_rate** delta table and view the website bounce rate data.
 
