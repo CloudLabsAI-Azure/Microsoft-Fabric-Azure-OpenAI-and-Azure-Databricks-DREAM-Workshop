@@ -35,6 +35,7 @@ In this exercise, you will act as the Data Engineer, Eva, to transfer Contoso's 
 ![](media/labMedia/image%20(5).png)
 
 3. From the left navigation pane, click on **Workspaces** and then the **+ New workspace** button.
+
 ![task-1.1.2.png](media/labMedia/task-1.1.2.png)
 
 4. Type the name **<inject key= "WorkspaceName" enableCopy="true"/>**, **validate** the availability of the name, and click on **Advanced**.
@@ -46,6 +47,7 @@ In this exercise, you will act as the Data Engineer, Eva, to transfer Contoso's 
 ![works-apply.png](media/labMedia/workspace01.png)
 
 5. Ensure **Fabric capacity** is enabled, verify that **fabric...- North Central US** is selected under **Capacity**, and then click **Apply**.
+
 ![works-apply.png](./media/labMedia/workspace02.png)
 
 >**Note:** Close any pop-up that appears on the screen.
@@ -63,9 +65,11 @@ Now, let's see how each department can easily create a Lakehouse in the Contoso 
 >**Note:** Verify that you are in the **<inject key= "WorkspaceName" enableCopy="false"/>** **Workspace** created in the earlier steps.
 
 1. Click on **+ New item** button.
+
 ![task-wb1.png](media/labMedia/lhnew-item.png)
 
 2. In the pop-up window search for **Lakehouse** in the search bar and click on **Lakehouse**.
+
 ![task-wb2.png](media/labMedia/lakehousesearch.png)
 
 3. Copy the name **lakehouse** from the following and paste it in the **Name** field.
@@ -74,6 +78,7 @@ Now, let's see how each department can easily create a Lakehouse in the Contoso 
 lakehouse
 ```
 4. Click on the **Lakehouse schemas** checkbox and then click on the **Create** button.
+
 ![task-1.2.3.png](media/labMedia/task-1.2.3.png)
 
 
@@ -89,11 +94,13 @@ Now, this is something exciting! This section shows how easy it is to create Sho
 1. Click on the **three dots (ellipses)** on the right side of Files.
 
 2. Click on **New shortcut**.
+
 ![task-wb5.png](media/labMedia/task-wb5.png)
 
 >**Note:** Make sure you create a shortcut under **Files** and not under **Tables** in the lakehouse explorer pane
 
 3. In the pop-up window, under **External sources**, select the **Azure Data Lake Storage Gen2** source.
+
 ![task-1.3-ext-shortcut4.png](media/labMedia/task-1.3-ext-shortcut4.png)
 
 >**Note:** Wait for the screen to load.
@@ -101,20 +108,25 @@ Now, this is something exciting! This section shows how easy it is to create Sho
 4. Select **Create new Connection** radio button.
 
 5. In the following screen, we need to enter the connection details for the ADLS Gen2 shortcut.
+
 ![shortcut111.png](media/labMedia/task-1.3-ext-shortcut-11u.png)
 
 6. Copy the **Data Lake Storage endpoint**: **<inject key= "storageEndpoint" enableCopy="true"/>** and paste it into the **URL** field.
 
 7. Select **Organization account** in the **Authentication Kind**, and ensure you are signed in and click on **Next**.
+
 ![shortcut111.png](media/labMedia/task-1.3-ext-shortcut-111u.png)
 
 8. Select the **data** and **litwaredata** checkbox and then Click on the **Next** button.
+
 ![task-wb6.png](media/labMedia/task-wb6.png)
 
 9. Click on the **Create** button.
+
 ![task-1.3-ext-shortcut10.png](media/labMedia/task-1.3-ext-shortcut10.png)
 
 10. And there you go! Your shortcut is now ready! We can see the newly created shortcut named **litwaredata** and **data**.
+
 ![task-wb7.png](media/labMedia/64.1.png)
 
 Prior to Microsoft Fabric, departments in Contoso had to move the data they needed from other departments via time-consuming ETL processes. But look, now they have created shortcuts. No need to move any of this data. That is the power of OneLake!
@@ -124,9 +136,11 @@ Prior to Microsoft Fabric, departments in Contoso had to move the data they need
 Now, let’s see how Data Engineer, Eva, got the remaining data into OneLake by creating Delta tables using Spark Notebook. By using a Spark Notebook to create Delta tables, Eva can ensure more reliable, scalable, and efficient data management, which is essential for handling big data workflows.
 
 1. Click on Workspace **<inject key= "WorkspaceName" enableCopy="false"/>** and select **New item**.
+
 ![task-wb8S.png](media/labMedia/64.2.png)
 
 2. In the **New Item** tab, scroll down and click on **Notebook**
+
 ![task-wb8S.png](media/labMedia/64.3.png)
 
 >**Note:**  If the **Pop-up** appears click on **Skip tour**
@@ -134,9 +148,11 @@ Now, let’s see how Data Engineer, Eva, got the remaining data into OneLake by 
 ![task-wb8S.png](media/labMedia/64.4.png)
 
 3. Click on the **Add data items** button and then select **Existing data sources** from the dropdown.
+
 ![task-wb8S.png](media/labMedia/additem041.png)
 
 4. Select the **lakehouse** and then click on **Connect** button.
+
 ![lakehouseconnect.png](media/labMedia/lakehouseconnect.png)
 
 5. Once the notebook is created, paste the **below code** in the existing cell and run the cell by clicking on the **Run cell** icon.
@@ -162,15 +178,19 @@ for file in csv_files:
 6. Once the **execution is successful** you'll see a **Green tick** appears at the bottom of cell.
 7. Click on the Stop icon in the ribbon at the top to **Stop the Spark session**.
 8. Click on **Lakehouse** in the left navigation bar.
+
 ![task-wb8S.png](media/64.9.png)
 
 9. Expand **Tables** and expand **dbo** under Tables. Click on the **three dots** (Ellipses) next to dbo and click **Refresh** from dropdown options.
+
 ![task-wb8S.png](media/labMedia/64.10.1.png)
 
 10. View the successfully **loaded tables**.
+
 ![task-wb8S.png](media/labMedia/64.10.png)
 
 11. Click on **website_bounce_rate** delta table and view the website bounce rate data.
+
 ![64.11.png](media/labMedia/64.11.png)
 
 
