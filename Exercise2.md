@@ -108,7 +108,7 @@ Mirroring the Azure Databricks Catalog structure in Microsoft Fabric allows seam
 
 ![Task-2.3_8.png](media/labMedia/Task-2.3_8u.png)
 
-10. In the **Name** field enter **litware_unity_catalog1** for your mirrored Databricks Catalog and click on the **Create** button.
+11. In the **Name** field enter **litware_unity_catalog1** for your mirrored Databricks Catalog and click on the **Create** button.
 
 ```BASH
 litware_unity_catalog1
@@ -116,21 +116,21 @@ litware_unity_catalog1
 
 ![Task-2.3_9.png](media/labMedia/Task-2.3_9.png)
 
-11. Click on the **Monitor catalog** button to track the mirroring **Status** and then close it.
+12. Click on the **Monitor catalog** button to track the mirroring **Status** and then close it.
 
 ![Task-2.3_10.1.png](media/labMedia/Task-2.3_10.1.png)
 
-12. Click on the **View SQL endpoint** button. You can also select the tables to preview data.
+13. Click on the **View SQL endpoint** button. You can also select the tables to preview data.
 
 ![Task-2.3_10.png](media/labMedia/Task-2.3_10.png)
 
-13. Click on the **Refresh button**, then expand **rag**, and further expand **Tables** to view replicated tables.
+14. Click on the **Refresh button**, then expand **rag**, and further expand **Tables** to view replicated tables.
 
 ![Task-2.3_10.png](media/labMedia/f79.png)
 
 >**Note:** If you are unable to view replicated tables, refresh the page by pressing **Ctrl + Shift + R**.
  
-13. Click on **New SQL Query**, then copy and paste the following **SQL query** in query editor and click on **Run** button.
+15. Click on **New SQL Query**, then copy and paste the following **SQL query** in query editor and click on **Run** button.
  
 ![Task-2.3_10.png](media/labMedia/f80.png)
  
