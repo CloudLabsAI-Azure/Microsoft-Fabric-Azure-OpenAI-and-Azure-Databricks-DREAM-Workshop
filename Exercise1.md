@@ -215,21 +215,21 @@ You will experience how easy it is to use Fast Copy to transform Litware's sales
 
 ![task-1.2.04.S1.png](media/labMedia/task-1.2.04.S1.png)
 
-5. Expand **lakehouse**, expand **Files** and expand **data** then scroll down.
+4. Expand **lakehouse**, expand **Files** and expand **data** then scroll down.
 
 ![task-wb9.S.png](media/chosedata001.png)
 
-6. Scroll down and select the **sales_data.csv** checkbox, then **click** on the **Create** button.
+5. Scroll down and select the **sales_data.csv** checkbox, then **click** on the **Create** button.
 
 ![task-wb9.S.png](media/labMedia/chosesalesdata.png)
 
-7. Collapse the **Queries** pane and take a look at the sales dataset, the first row needs to be identified as a header (**note that the first row of this dataset is not a header**).
+6. Collapse the **Queries** pane and take a look at the sales dataset, the first row needs to be identified as a header (**note that the first row of this dataset is not a header**).
 
 ![DFData.png](media/labMedia/DFData.png)
 
 **Let's use Copilot to perform data cleansing.**
 
-8. Click on the **Copilot** button, paste the **prompt** provided below in the following text box and click on the **send** icon.
+7. Click on the **Copilot** button, paste the **prompt** provided below in the following text box and click on the **send** icon.
 
 >**Note:** If the copilot icon is not visible, click on the **>** under the Home ribbon to move the items. 
 
@@ -242,26 +242,26 @@ In the table sales_data csv, apply first row as headers.
 
 >**Note:** If Copilot needs additional context to understand your query, consider rephrasing the prompt to include more details.
 
-9. Scroll to the right-hand side and observe the **GrossRevenue** and **NetRevenue** columns. You'll notice the there are some empty rows with null values.
+8. Scroll to the right-hand side and observe the **GrossRevenue** and **NetRevenue** columns. You'll notice the there are some empty rows with null values.
 
 ![DFData12.png](media/labMedia/DFData12.png)
 
 >**Let's use Copilot to remove empty rows.**
 
-10. Similarly, paste the prompt below in Copilot and click on the **send** icon.
+9. Similarly, paste the prompt below in Copilot and click on the **send** icon.
 
 ```BASH
 Remove empty rows from GrossRevenue and NetRevenue columns.
 ```
 ![DFData12.png](media/rememptyrow.png)
 
-11. Scroll to the right hand side and observe the **GrossRevenue** and **NetRevenue** columns (**there are no empty rows with null values**).
+10. Scroll to the right hand side and observe the **GrossRevenue** and **NetRevenue** columns (**there are no empty rows with null values**).
 
 ![DFData13.png](media/labMedia/DFData13.png)
 
 >**Note:** Expand the queries pane collapsed earlier.
 
-12. Right-click on the query **sales_data.csv**, and select **Require Fast Copy**.
+11. Right-click on the query **sales_data.csv**, and select **Require Fast Copy**.
 
 <img src="media/55.png" width="800"/>  
 
@@ -269,13 +269,13 @@ Remove empty rows from GrossRevenue and NetRevenue columns.
 
 >**Note:** Due to time constraints, we will not publish and run the Dataflow from the Pipeline.
 
-13. Click on the **close** icon at top right of the **Dataflow** window.
+12. Click on the **close** icon at top right of the **Dataflow** window.
 
 >**Note:** If necessary, scroll up to show the close icon.
 
 <img src="media/dataflowclose.png" width="800"/> 
 
-14. Click on **Yes.**
+13. Click on **Yes.**
 
 ![dataflowclose.png](media/closeyes.png)
 
