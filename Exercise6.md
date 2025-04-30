@@ -20,13 +20,13 @@ Litware had a lot of their marketing data in the Azure SQL DB, so Contoso used D
 
 ![Task-6.1_3.png](media/labMedia/Task-6.1_3.png)
 
-5. In the **Server** field, paste **<inject key= "mssqlServer" enableCopy="true"/>**
+4. In the **Server** field, paste **<inject key= "mssqlServer" enableCopy="true"/>**
 
-6. In **Database** field paste **SalesDb**
+5. In **Database** field paste **SalesDb**
 
 ![task-1.3.16.png](media/labMedia/task-6.2.6.png)
 
-5.  Scroll down and click on **Authentication kind** dropdown, select **Basic**. In the **Username** field enter **labsqladmin**, and in the **Password** field enter **Smoothie@2024** and then click on the **Connect** button.
+6.  Scroll down and click on **Authentication kind** dropdown, select **Basic**. In the **Username** field enter **labsqladmin**, and in the **Password** field enter **Smoothie@2024** and then click on the **Connect** button.
 
 ```
 labsqladmin
@@ -39,11 +39,11 @@ Smoothie@2025
 
 >**Note:** Close any pop-up that you see throughout the lab.
 
-6. In the **Choose data** screen, you can select the tables to be mirrored into Fabric, then select the checkbox **Automatically mirror future tables** and click on **Connect** button.
+7. In the **Choose data** screen, you can select the tables to be mirrored into Fabric, then select the checkbox **Automatically mirror future tables** and click on **Connect** button.
 
     ![Task-6.1_9.png](media/labMedia/Task-6.1_9.png)
 
-7. In the name field, enter **Mirrored_SalesDb1** and click on **Create mirrored database** button.
+8. In the name field, enter **Mirrored_SalesDb1** and click on **Create mirrored database** button.
 
 ```
 Mirrored_SalesDb1
@@ -52,7 +52,7 @@ Mirrored_SalesDb1
 ![Task-6.1_9.1.png](media/labMedia/Task-6.1_9.1.png)
 
 
-8. Wait for 5 Minutes to get the **Rows replicated** statistics are displayed. If not refresh the **Monitor replication** tab as shown in the below screen. Now, Azure SQL DB has been successfully mirrored.
+9. Wait for 5 Minutes to get the **Rows replicated** statistics are displayed. If not refresh the **Monitor replication** tab as shown in the below screen. Now, Azure SQL DB has been successfully mirrored.
 
 ![Task-6.1_11.png](media/labMedia/Task-6.1_11-Copy.png)
 

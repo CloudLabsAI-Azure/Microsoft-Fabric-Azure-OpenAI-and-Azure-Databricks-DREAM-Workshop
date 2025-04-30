@@ -202,11 +202,11 @@ Asking the question again returns a different answer, **Mountain-200 Black, 46**
 
 In addition to instructions, examples serve as another effective way to guide the AI. If you have questions that your AI skill often receives, or questions that require complex joins.
 
-10. Click on the **Example queries** In the Example queries click on **edit** icon.
+11. Click on the **Example queries** In the Example queries click on **edit** icon.
 
 ![task-5.2](media/labMedia/l26.png)
 
-11. Click on **+ Add Example**, enter the provided question along with its corresponding SQL query, and then click the **Close (X)** button.
+12. Click on **+ Add Example**, enter the provided question along with its corresponding SQL query, and then click the **Close (X)** button.
 
 ![task-5.2](media/labMedia/l27.png)
 
@@ -217,7 +217,7 @@ In addition to instructions, examples serve as another effective way to guide th
 >**Note** : After entering the first example and query, click the **+ Add Example** button.
 
 
-12. Type **who are the top 5 customers by total sales amount?** in the chatbox and click on **Send** button.
+13. Type **who are the top 5 customers by total sales amount?** in the chatbox and click on **Send** button.
 
 ```BASH
 who are the top 5 customers by total sales amount?
@@ -225,14 +225,14 @@ who are the top 5 customers by total sales amount?
 
 ![task-5.2](media/labMedia/l28.png)
 
-13. Click on **Publish**.
+14. Click on **Publish**.
 
 ![task-5.2](media/labMedia/AIskill13.png)
 
-14. In the pop-up screen click on the **Publish** button.
+15. In the pop-up screen click on the **Publish** button.
 
 ![task-5.2](media/labMedia/AIskill14.png)
 
-15. Notice that AI skill is published successfully.
+16. Notice that AI skill is published successfully.
 
 ![task-5.2](media/labMedia/AIskill15.png)

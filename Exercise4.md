@@ -36,7 +36,7 @@ Contoso-Eventhouse
 >**Note :** If you have 10 items in the left navigation, you won't be able to create an Eventstream. Remove any unnecessary items and then proceed to create the Eventstream.
 
 
-6. Enter the name as **RealtimeDataTo-KQL-DB** and click on **Create** button.
+5. Enter the name as **RealtimeDataTo-KQL-DB** and click on **Create** button.
 
 ```
 RealtimeDataTo-KQL-DB
@@ -44,20 +44,20 @@ RealtimeDataTo-KQL-DB
 
 ![Eventst-name1.png](media/labMedia/Eventst-name1.png)
 
-7. Click on **Connect data sources**. 
+6. Click on **Connect data sources**. 
 
 ![eventhouse12.png](media/labMedia/eventhouse12.png)
 
-8. Click on the **Connect** button for **Azure Event Hubs**.
+7. Click on the **Connect** button for **Azure Event Hubs**.
 
 ![task-5.2.1new1.0.4.png](media/labMedia/task-5.2.1new1.0.4.png)
 
-9. Under the Connection field, click on **New connection**.
+8. Under the Connection field, click on **New connection**.
 
 ![eventhouse13.png](media/labMedia/eventhouse13.png)
 
 
-10. Enter the value for the **Event Hub namespace** as **<inject key= "eventhubNamespace" enableCopy="true"/>** and enter the **Event Hub** value as **thermostat**.
+9. Enter the value for the **Event Hub namespace** as **<inject key= "eventhubNamespace" enableCopy="true"/>** and enter the **Event Hub** value as **thermostat**.
 
 ```BASH
 thermostat
@@ -81,60 +81,60 @@ thermostat
 
 ![pop-up3.png](media/labMedia/pop-up3.png)
 
-17. Select Data format as **JSON** and click on **Next** button.
+12. Select Data format as **JSON** and click on **Next** button.
 
 ![eventhouse15.png](media/labMedia/eventhouse15.png)
 
 >**Note:** Wait for the connection to be established.
 
-18. Click on the **Add** button.
+13. Click on the **Add** button.
 
 ![task-5.2.1new8.png](media/labMedia/task-5.2.1new8.png)
 
-19. In the Eventstream canvas, click on the **Add destination** dropdown and select **Eventhouse**.
+14. In the Eventstream canvas, click on the **Add destination** dropdown and select **Eventhouse**.
 
 ![sel-kql-db.png](media/labMedia/sel-kql-db.png)
 
-20. Select the **Event processing before ingestion** radio button, in the **Destination name** field enter **RealTimeData**.
+15. Select the **Event processing before ingestion** radio button, in the **Destination name** field enter **RealTimeData**.
 
 ```
 RealTimeData
 ```
 
-21. In the **Workspace** field select <inject key="WorkspaceName" enableCopy="true"/>. 
+16. In the **Workspace** field select <inject key="WorkspaceName" enableCopy="true"/>. 
 
-22. In the **Eventhouse** dropdown select **Contoso-Eventhouse**.
+17. In the **Eventhouse** dropdown select **Contoso-Eventhouse**.
 
-23. In the **KQL Database** dropdown select **Contoso-Eventhouse**.
+18. In the **KQL Database** dropdown select **Contoso-Eventhouse**.
 
-24. In the **KQL Destination table** field, click on **Create new** button..
+19. In the **KQL Destination table** field, click on **Create new** button..
 
 ![eventhouse5.png](media/labMedia/eventhouse5.png)
 
-25. Enter the table name as **thermostat** and then click on the **Done** button.
+20. Enter the table name as **thermostat** and then click on the **Done** button.
 
 ```
 thermostat
 ```
 ![eventhouse6.png](media/labMedia/eventhouse6.png)
 
-26. In the **Input data format** dropdown select **Json** and click on the **Save** button.
+21. In the **Input data format** dropdown select **Json** and click on the **Save** button.
 
 >**Note:** Zoom-out on your screen if the **Input data format field** is not visible.
 
 ![eventhouse7.png](media/labMedia/eventhouse7.png)
 
-27. Drag Arrow from **RealtimeDataTo-KQL** and connect it to **RealTimeData**.
+22. Drag Arrow from **RealtimeDataTo-KQL** and connect it to **RealTimeData**.
 
 ![eventhouse8.png](media/labMedia/eventhouse8.png)
 
-28. Click on the **Publish** button.
+23. Click on the **Publish** button.
 
 ![task-5.2.15.png](media/labMedia/task-5.2.15.png)
 
 >**Note:** Wait for the data ingestion from EventHub to KQL DB, In the RealTimeData canvas, the status will appear as **Active**, confirming that the streaming has started successfully.
 
-29. Once you see that the streaming has started, click on **Refresh** and wait for the data to preview.
+24. Once you see that the streaming has started, click on **Refresh** and wait for the data to preview.
 
 ![eventhouse17.png](media/labMedia/eventhouse17.png)
 
