@@ -111,3 +111,5 @@ Third, we created a semantic model in Power BI and generate insights using Copil
 Fourth, we explored real-time data ingestion using Eventstream and analyzed patterns, anomalies, and outliers with Copilot in KQL Database.
 
 Fifth, we explored Streaming data using KQL DB for a Real-time Analytics experience. Here, we created a KQL Database, ingested real-time and historical data into KQL DB, analyzed patterns to uncover anomalies and outliers with the help of Copilot, and leveraged AI for data Q&A.
+
+Finally, we created a Mirrored Database in Microsoft Fabric and analysed the data using SQL.
