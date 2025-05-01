@@ -11,9 +11,9 @@
 
     >**Note**: **Do not click anywhere else on the screen until all of the text has been auto-filled.**
 
-3.**IMPORTANT!!** PROCEED WITH THE NEXT STEPS WHILE THIS LOADS.
+3. **IMPORTANT!!** PROCEED WITH THE NEXT STEPS WHILE THIS LOADS.
 
-  ![](media/labMedia/task-1.3.png)
+    ![](media/labMedia/task-1.3.png)
 
 
 ### Task 1.1: Create a Microsoft Fabric enabled workspace
@@ -234,7 +234,6 @@ You will experience how easy it is to use Fast Copy to transform Litware's sales
     In the table sales_data csv, apply first row as headers.
     ```
     ![df1a2.png](media/labMedia/df1a2.png)
-
 
     >**Note:** If Copilot needs additional context to understand your query, consider rephrasing the prompt to include more details.
 
