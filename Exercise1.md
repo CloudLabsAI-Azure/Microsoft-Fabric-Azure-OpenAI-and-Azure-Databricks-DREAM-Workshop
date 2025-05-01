@@ -92,39 +92,39 @@ Now, this is something exciting! This section shows how easy it is to create Sho
 
 2. Click on **New shortcut**.
 
-![task-wb5.png](media/labMedia/task-wb5.png)
+    ![task-wb5.png](media/labMedia/task-wb5.png)
 
->**Note:** Make sure you create a shortcut under **Files** and not under **Tables** in the lakehouse explorer pane
+    >**Note:** Make sure you create a shortcut under **Files** and not under **Tables** in the lakehouse explorer pane
 
 3. In the pop-up window, under **External sources**, select the **Azure Data Lake Storage Gen2** source.
 
-![task-1.3-ext-shortcut4.png](media/labMedia/task-1.3-ext-shortcut4.png)
+    ![task-1.3-ext-shortcut4.png](media/labMedia/task-1.3-ext-shortcut4.png)
 
->**Note:** Wait for the screen to load.
+    >**Note:** Wait for the screen to load.
 
 4. Select **Create new Connection** radio button.
 
 5. In the following screen, we need to enter the connection details for the ADLS Gen2 shortcut.
 
-![shortcut111.png](media/labMedia/task-1.3-ext-shortcut-11u.png)
+    ![shortcut111.png](media/labMedia/task-1.3-ext-shortcut-11u.png)
 
 6. Copy the **Data Lake Storage endpoint**: **<inject key= "storageEndpoint" enableCopy="true"/>** and paste it into the **URL** field.
 
 7. Select **Organization account** in the **Authentication Kind**, and ensure you are signed in and click on **Next**.
 
-![shortcut111.png](media/labMedia/task-1.3-ext-shortcut-111u.png)
+    ![shortcut111.png](media/labMedia/task-1.3-ext-shortcut-111u.png)
 
 8. Select the **data** and **litwaredata** checkbox and then Click on the **Next** button.
 
-![task-wb6.png](media/labMedia/task-wb6.png)
+    ![task-wb6.png](media/labMedia/task-wb6.png)
 
 9. Click on the **Create** button.
 
-![task-1.3-ext-shortcut10.png](media/labMedia/task-1.3-ext-shortcut10.png)
+    ![task-1.3-ext-shortcut10.png](media/labMedia/task-1.3-ext-shortcut10.png)
 
 10. And there you go! Your shortcut is now ready! We can see the newly created shortcut named **litwaredata** and **data**.
 
-![task-wb7.png](media/labMedia/64.1.png)
+    ![task-wb7.png](media/labMedia/64.1.png)
 
 Prior to Microsoft Fabric, departments in Contoso had to move the data they needed from other departments via time-consuming ETL processes. But look, now they have created shortcuts. No need to move any of this data. That is the power of OneLake!
 
@@ -134,61 +134,61 @@ Now, let’s see how Data Engineer, Eva, got the remaining data into OneLake by 
 
 1. Click on Workspace **<inject key= "WorkspaceName" enableCopy="false"/>** and select **New item**.
 
-![task-wb8S.png](media/labMedia/64.2.png)
+    ![task-wb8S.png](media/labMedia/64.2.png)
 
 2. In the **New Item** tab, scroll down and click on **Notebook**
 
-![task-wb8S.png](media/labMedia/64.3.png)
+    ![task-wb8S.png](media/labMedia/64.3.png)
 
->**Note:**  If the **Pop-up** appears click on **Skip tour**
+    >**Note:**  If the **Pop-up** appears click on **Skip tour**
  
-![task-wb8S.png](media/labMedia/64.4.png)
+    ![task-wb8S.png](media/labMedia/64.4.png)
 
 3. Click on the **Add data items** button and then select **Existing data sources** from the dropdown.
 
-![task-wb8S.png](media/labMedia/additem041.png)
+    ![task-wb8S.png](media/labMedia/additem041.png)
 
 4. Select the **lakehouse** and then click on **Connect** button.
 
-![lakehouseconnect.png](media/labMedia/lakehouseconnect.png)
+    ![lakehouseconnect.png](media/labMedia/lakehouseconnect.png)
 
 5. Once the notebook is created, paste the **below code** in the existing cell and run the cell by clicking on the **Run cell** icon.
 
-```BASH
-import os
-import pandas as pd
+    ```BASH
+    import os
+    import pandas as pd
  
-# List all CSV files in the 'litwaredata' folder
-file_path = '/lakehouse/default/Files/litwaredata/'
-csv_files = [file for file in os.listdir(file_path) if file.endswith('.csv')]
+    # List all CSV files in the 'litwaredata' folder
+    file_path = '/lakehouse/default/Files/litwaredata/'
+    csv_files = [file for file in os.listdir(file_path) if file.endswith('.csv')]
  
-# Load each CSV file into a table
-for file in csv_files:
-    table_name = file.split('.')[0]
-    df = pd.read_csv(file_path + file)
-    spark.createDataFrame(df).write.mode("ignore").format("delta").saveAsTable(table_name)
-```
-![task-wb8S.png](media/labMedia/64.8.png)
+    # Load each CSV file into a table
+    for file in csv_files:
+      table_name = file.split('.')[0]
+      df = pd.read_csv(file_path + file)
+      spark.createDataFrame(df).write.mode("ignore").format("delta").saveAsTable(table_name)
+    ```
+    ![task-wb8S.png](media/labMedia/64.8.png)
 
->**Note:** Please wait for the session to start and execute the cell.
+    >**Note:** Please wait for the session to start and execute the cell.
 
 6. Once the **execution is successful** you'll see a **Green tick** appears at the bottom of cell.
 7. Click on the Stop icon in the ribbon at the top to **Stop the Spark session**.
 8. Click on **Lakehouse** in the left navigation bar.
 
-![task-wb8S.png](media/64.9.png)
+    ![task-wb8S.png](media/64.9.png)
 
 9. Expand **Tables** and expand **dbo** under Tables. Click on the **three dots** (Ellipses) next to dbo and click **Refresh** from dropdown options.
 
-![task-wb8S.png](media/labMedia/64.10.1.png)
+    ![task-wb8S.png](media/labMedia/64.10.1.png)
 
 10. View the successfully **loaded tables**.
 
-![task-wb8S.png](media/labMedia/64.10.png)
+    ![task-wb8S.png](media/labMedia/64.10.png)
 
 11. Click on **website_bounce_rate** delta table and view the website bounce rate data.
 
-![64.11.png](media/labMedia/64.11.png)
+    ![64.11.png](media/labMedia/64.11.png)
 
 
 You now have all the table in **OneLake** for Contoso to leverage. Next, we proceed with data transformation using Dataflow Gen2 to transform the sales data ingested from Litware. 
@@ -202,79 +202,78 @@ You will experience how easy it is to use Fast Copy to transform Litware's sales
 
 1. In the left pane, click on the **<inject key="WorkspaceName" enableCopy="false"/>** workspace, then select **New item**, and click on **Dataflow Gen2**.
 
-![task-1.3.1.png](media/labMedia/f9.png)
+    ![task-1.3.1.png](media/labMedia/f9.png)
 
 2. Click on the **Get data** icon (**not on the dropdown arrow at the bottom of the icon**).
 
-![getdataSs.png](media/labMedia/getdataSs.png)
+    ![getdataSs.png](media/labMedia/getdataSs.png)
 
 3. In the pop-up window, scroll down to **Onelake catalog** and click on **lakehouse**.
 
-![task-1.2.04.S1.png](media/labMedia/task-1.2.04.S1.png)
+    ![task-1.2.04.S1.png](media/labMedia/task-1.2.04.S1.png)
 
 4. Expand **lakehouse**, expand **Files** and expand **data** then scroll down.
 
-![task-wb9.S.png](media/chosedata001.png)
+    ![task-wb9.S.png](media/chosedata001.png)
 
 5. Scroll down and select the **sales_data.csv** checkbox, then **click** on the **Create** button.
 
-![task-wb9.S.png](media/labMedia/chosesalesdata.png)
+    ![task-wb9.S.png](media/labMedia/chosesalesdata.png)
 
 6. Collapse the **Queries** pane and take a look at the sales dataset, the first row needs to be identified as a header (**note that the first row of this dataset is not a header**).
 
-![DFData.png](media/labMedia/DFData.png)
+    ![DFData.png](media/labMedia/DFData.png)
 
 **Let's use Copilot to perform data cleansing.**
 
 7. Click on the **Copilot** button, paste the **prompt** provided below in the following text box and click on the **send** icon.
 
->**Note:** If the copilot icon is not visible, click on the **>** under the Home ribbon to move the items. 
+    >**Note:** If the copilot icon is not visible, click on the **>** under the Home ribbon to move the items. 
 
-```BASH
-In the table sales_data csv, apply first row as headers.
-```
+    ```BASH
+    In the table sales_data csv, apply first row as headers.
+    ```
+    ![df1a2.png](media/labMedia/df1a2.png)
 
-![df1a2.png](media/labMedia/df1a2.png)
 
-
->**Note:** If Copilot needs additional context to understand your query, consider rephrasing the prompt to include more details.
+    >**Note:** If Copilot needs additional context to understand your query, consider rephrasing the prompt to include more details.
 
 8. Scroll to the right-hand side and observe the **GrossRevenue** and **NetRevenue** columns. You'll notice the there are some empty rows with null values.
 
-![DFData12.png](media/labMedia/DFData12.png)
+    ![DFData12.png](media/labMedia/DFData12.png)
 
->**Let's use Copilot to remove empty rows.**
+    >**Let's use Copilot to remove empty rows.**
 
 9. Similarly, paste the prompt below in Copilot and click on the **send** icon.
 
-```BASH
-Remove empty rows from GrossRevenue and NetRevenue columns.
-```
-![DFData12.png](media/rememptyrow.png)
+    ```BASH
+    Remove empty rows from GrossRevenue and NetRevenue columns.
+    ```
+    ![DFData12.png](media/rememptyrow.png)
 
 10. Scroll to the right hand side and observe the **GrossRevenue** and **NetRevenue** columns (**there are no empty rows with null values**).
 
-![DFData13.png](media/labMedia/DFData13.png)
+    ![DFData13.png](media/labMedia/DFData13.png)
 
->**Note:** Expand the queries pane collapsed earlier.
+    >**Note:** Expand the queries pane collapsed earlier.
 
 11. Right-click on the query **sales_data.csv**, and select **Require Fast Copy**.
 
-<img src="media/55.png" width="800"/>  
+    <img src="media/55.png" width="800"/>  
 
 **Fast copy** enhances the data handling capabilities within Fabric, making **data transfers** faster and more seamless across the platform.
 
->**Note:** Due to time constraints, we will not publish and run the Dataflow from the Pipeline.
+  >**Note:** Due to time constraints, we will not publish and run the Dataflow from the Pipeline.
 
 12. Click on the **close** icon at top right of the **Dataflow** window.
 
->**Note:** If necessary, scroll up to show the close icon.
+    >**Note:** If necessary, scroll up to show the close icon.
 
-<img src="media/dataflowclose.png" width="800"/> 
+    <img src="media/dataflowclose.png" width="800"/> 
 
 13. Click on **Yes.**
 
-![dataflowclose.png](media/closeyes.png)
+    ![dataflowclose.png](media/closeyes.png)
 
 
 Congrats on completing this data transformation exercise!
