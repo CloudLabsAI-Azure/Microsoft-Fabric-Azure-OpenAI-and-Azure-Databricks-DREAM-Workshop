@@ -10,34 +10,33 @@ Litware had a lot of their marketing data in the Azure SQL DB, so Contoso used D
 
 1. Click on **Workspaces** and select **<inject key= "WorkspaceName" enableCopy="false"/>**, and select **New item** from menu bar.
 
-![Task-6.1_1.png](media/labMedia/Task-6.1_1.png)
+    ![Task-6.1_1.png](media/labMedia/Task-6.1_1.png)
 
 2. In the **New item** window, search for **SQL** in the saecrh bar then select **Mirrored Azure SQL Database...**.
 
-![Task-6.1_2.png](media/labMedia/Task-6.1_2.png)
+    ![Task-6.1_2.png](media/labMedia/Task-6.1_2.png)
 
 3. When prompted to **Choose a database connection to get started**, look for **New sources** and select **Azure SQL database**.
 
-![Task-6.1_3.png](media/labMedia/Task-6.1_3.png)
+    ![Task-6.1_3.png](media/labMedia/Task-6.1_3.png)
 
 4. In the **Server** field, paste **<inject key= "mssqlServer" enableCopy="true"/>**
 
 5. In **Database** field paste **SalesDb**
 
-![task-1.3.16.png](media/labMedia/task-6.2.6.png)
+    ![task-1.3.16.png](media/labMedia/task-6.2.6.png)
 
 6.  Scroll down and click on **Authentication kind** dropdown, select **Basic**. In the **Username** field enter **labsqladmin**, and in the **Password** field enter **Smoothie@2024** and then click on the **Connect** button.
 
-```
-labsqladmin
-```
-```
-Smoothie@2025
-```
+    ```
+    labsqladmin
+    ```
+    ```
+    Smoothie@2025
+    ```
+    ![connectsql.png](media/labMedia/connectsql.png)
 
-![connectsql.png](media/labMedia/connectsql.png)
-
->**Note:** Close any pop-up that you see throughout the lab.
+    >**Note:** Close any pop-up that you see throughout the lab.
 
 7. In the **Choose data** screen, you can select the tables to be mirrored into Fabric, then select the checkbox **Automatically mirror future tables** and click on **Connect** button.
 
@@ -45,18 +44,18 @@ Smoothie@2025
 
 8. In the name field, enter **Mirrored_SalesDb1** and click on **Create mirrored database** button.
 
-```
-Mirrored_SalesDb1
-```
+    ```
+    Mirrored_SalesDb1
+    ```
 
-![Task-6.1_9.1.png](media/labMedia/Task-6.1_9.1.png)
+    ![Task-6.1_9.1.png](media/labMedia/Task-6.1_9.1.png)
 
 
 9. Wait for 5 Minutes to get the **Rows replicated** statistics are displayed. If not refresh the **Monitor replication** tab as shown in the below screen. Now, Azure SQL DB has been successfully mirrored.
 
-![Task-6.1_11.png](media/labMedia/Task-6.1_11-Copy.png)
+    ![Task-6.1_11.png](media/labMedia/Task-6.1_11-Copy.png)
 
->**Note:** It might take approximately 3-5 minutes for the Rows replicated column to get populated. Try clicking on the Refresh icon again.
+    >**Note:** It might take approximately 3-5 minutes for the Rows replicated column to get populated. Try clicking on the Refresh icon again.
 
 
 ---
@@ -69,29 +68,29 @@ This means Contoso’s marketing data from SQL database is accessed seamlessly i
 
 1. Continuing from the previously created Mirrored SQL DB window, select **SQL analytics endpoint** from top right dropdown box.
 
-![Task-6.2_1.png](media/labMedia/Task-6.2_1.png)
+    ![Task-6.2_1.png](media/labMedia/Task-6.2_1.png)
 
 2. Expand the **Schemas** and click on **DimProduct** table to see data preview. and then click on **New SQL query** button from the menu bar.
 
-![Task-6.2_2.png](media/labMedia/Task-6.2_2.png)
+    ![Task-6.2_2.png](media/labMedia/Task-6.2_2.png)
 
->**Note:** Click on the **Refresh** button if you are not able view the Tables.
+    >**Note:** Click on the **Refresh** button if you are not able view the Tables.
 
 3. Copy below **SQL query** in query editor to explore mirrored data and perform your analysis. 
 
-```BASH
-Select distinct [ProductName] 
-from [FactSales] as fct
-left join [DimProduct] as prd
-on fct.[ProductKey]=prd.[ProductKey]
-where [SalesAmount] > 6000
-```
+    ```BASH
+    Select distinct [ProductName] 
+    from [FactSales] as fct
+    left join [DimProduct] as prd
+    on fct.[ProductKey]=prd.[ProductKey]
+    where [SalesAmount] > 6000
+    ```
 
 4. Click on **Run** and view the results. 
 
-![Task-6.2_3.png](media/labMedia/sqlquery.png)
+    ![Task-6.2_3.png](media/labMedia/sqlquery.png)
 
->**Note:** If SQL query is not retrieving any results, please wait for a while, refresh the page, and try running the query again.
+    >**Note:** If SQL query is not retrieving any results, please wait for a while, refresh the page, and try running the query again.
 
 ---
 
