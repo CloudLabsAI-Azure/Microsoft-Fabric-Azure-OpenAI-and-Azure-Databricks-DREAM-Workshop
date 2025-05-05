@@ -141,7 +141,7 @@ Mirroring the Azure Databricks Catalog structure in Microsoft Fabric allows seam
         SUM([Cost]) AS Total_Cost,
         AVG([Cost]) AS Avg_Cost
     FROM 
-        [litware_unity_catalog].[rag].[campaigndata]
+        [litware_unity_catalog1].[rag].[campaigndata]
     GROUP BY 
         [Campaign_Name]
     ORDER BY 
