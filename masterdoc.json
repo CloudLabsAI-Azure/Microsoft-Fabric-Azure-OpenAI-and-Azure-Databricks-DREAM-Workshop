@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "Modern Analytics with Microsoft Fabric and Azure Databricks DREAM Lab",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/",
+    "Files": [
+			{
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/getStarted.md",
+        "Order": 0
+      },
+
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/Introduction.md",
+        "Order": 1
+      },
+
+			{
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/Exercise1.md",
+        "Order": 2
+      },
+
+			{
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/Exercise2.md",
+        "Order": 3
+      },
+
+			{
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/Exercise3.md",
+        "Order": 4
+      },
+
+			{
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/Exercise4.md",
+        "Order": 5
+      },
+
+			{
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/Exercise5.md",
+        "Order": 6
+      },
+
+			{
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/Exercise6.md",
+        "Order": 7
+      }
+
+
+    ]
+  }
+]
