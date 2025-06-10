@@ -148,7 +148,7 @@ We use KQL to query the thermostat data that’s streaming in near real-time fro
     ![task-5.3.1.png](media/labMedia/RTIQueryset.png)
 
 
-2. In the **KQL Queryset name** field, copy-paste the following, "Query Thermostat Data in Near Real-time using KQL Script" and then click on the **Create** button.
+2. In the **KQL Queryset name** field, copy-paste the following, **Query Thermostat Data in Near Real-time using KQL Script** and then click on the **Create** button.
 
     ```
     Query Thermostat Data in Near Real-time using KQL Script
@@ -156,7 +156,10 @@ We use KQL to query the thermostat data that’s streaming in near real-time fro
 
     ![task-5.3.3.png](media/labMedia/task-5.3.3.png)
 
-3. **Wait** for the query set creation and a new screen will display. In this screen, click on **Contoso-Eventhouse**, verify the workspace name and then click on the **Connect** button.
+3. **Wait** for the query set creation and Expand **+Add data source** and Click on **Eventhouse/KQL Database**. 
+
+   ![eventhouse10.png](media/labMedia/E5I1.png)
+4. In this screen, click on **Contoso-Eventhouse**, verify the workspace name and then click on the **Connect** button.
 
     ![eventhouse10.png](media/labMedia/eventhouse10.png)
 
