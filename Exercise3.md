@@ -96,6 +96,8 @@ Based on all the gathered data, Wendy is expected to create Power BI reports for
 
     ![task-new6.5.png](media/labMedia/task-new6.5.png)
 
+    >**Note** : If the above steps are not visible, you can skip them and proceed to the next step.
+    
 You will now see how easy it is for the data analyst to create compelling Power BI reports and get deep insights with literally no hands-on coding!
 	
 19. Click on the **Prompt Guide** button.
@@ -120,13 +122,13 @@ The first option, 'What’s in my data?' provides an overview of the contents of
 21. Click in the **Copilot chat** box field and enter the **prompt** below.
 
     ```
-    Create a Bounce Rate Analysis report that highlights the correlation between customer sentiment—especially among Millennials and Gen Z—unsuccessful product searches across different devices, and the website's bounce rate segmented by customer generation. Based on the results and data in the report, do you have any recommendations for improving the high bounce rate observed among the Millennial customer segments?  
+    Create a detailed page to analyze the Website Bounce Rate 
     ```
     >**Note:** Wait for the prompt to populate.
 
 22. Click on the **Send** button and wait for the results to load. 
 
-    ![query01.png](media/labMedia/query01.png)
+    ![query01.png](media/labMedia/itemss.png)
 	
     >**Note:** If you see the error message saying, 'Something went wrong.', try refreshing the page and restart the task. Being in a shared environment, the service may be busy at times.
     > - If Copilot needs additional context to understand your query, consider rephrasing the prompt to include more details.
@@ -146,7 +148,7 @@ We’ll ask Copilot for suggestions based on the results and data in the report.
     Based on the data in the page, what can be done to improve the bounce rate of   millennials? 
     ```
 	
-    ![task-new13.png](media/labMedia/task-new13.png)
+    ![task-new13.png](media/labMedia/img-12.png)
 	
 24. Look at the suggestions Copilot provided. Copilot creates the desired Power BI report and even goes a step further to give powerful insights. Wendy realizes that for the website bounce rate to improve, Contoso needs to transform their mobile website experience for millennials. This helps them reduce their millennial related customer churn too! Now, what if Contoso’s leadership team needed a quick summary of this entire report? **Smart Narrative** to the rescue! 
 	
