@@ -1,237 +1,188 @@
-### Exercise 5: Explorer Data Science experience in Microsoft Fabric (Optional)
- 
-Microsoft Fabric offers Data Science experiences to empower users to complete end-to-end data science workflows for data enrichment and business insights. You can complete a wide range of activities across the entire data science process, all the way from data exploration, preparation and cleansing to experimentation, modeling, model scoring and serving predictive insights to BI reports.
 
+### Exercise 5: Real-time Intelligence experience: Explore Streaming data using Copilot for KQL DB
 
-### Task 5.1: Build ML models and experiments using Copilot in Fabric
+Imagine, it is 6 am on the day of Contoso's big Thanksgiving sale. Customers are flocking to their stores in large numbers. We are about to witness the very culmination of Contoso's phenomenal transformation with Microsoft Fabric and Azure Databricks. Specifically, we will see how near real-time data is used to make decisions for the next moment in Contoso's stores to ensure optimal temperatures are maintained for their customers while they shop at the big sale!
 
-   ![task-3.1.1.png](media/labMedia/exercise5_1.1.png)
+### Task 5.1: Ingest real-time data into Eventhouse using Eventstream
+In the exercise, we'll explore how Data Engineer, Eva, ingested real-time data from the event hub into the KQL Database to monitor in-store temperatures in real time. 
 
-To understand the cause behind Contoso’s declining revenue, the team needed to dive deeper into their customers’ spending pattern.
+1.  Click on the **<inject key= "WorkspaceName" enableCopy="false"/>** workspace from the left navigation pane and select **New item**.
 
-Copilot responds to queries in natural language or generates customized code snippets for tasks like creating charts, filtering data, applying transformations, and building machine learning models.
+    ![st26.png](media/st26.png)
 
-Let’s see how Copilot for Notebook helps you, as a Data Engineer, quickly create Data Science Notebooks.
+    >**Note:** If you see a pop-up like the one below, click on the **Don't save** button.
 
-1. Click on the **<inject key= "WorkspaceName" enableCopy="true"/>** workspace from the left navigation pane.
+    ![donotsave.png](media/donotsave.png) 
 
-   ![task-3.1.2.png](media/labMedia/exercise5_1.3.4.png)
+2. In the new item window, search for the **Eventhouse** and click **Eventhouse**.
 
-   >**Note:** Click on **Don't save** if this pop-up appears.
+    ![st27.png](media/st27.png)
 
-   ![task-3.1.2.png](media/labMedia/f59.png)
+3. Enter the name **Contoso-Eventhouse**.
 
-2. Click on **Import** dropdown, select **Notebook** and then select **From this computer**
+    ```
+    Contoso-Eventhouse
+    ```
 
-   ![task-3.1.2.png](media/labMedia/f16.png)
+4. Click on the **Create** button and wait for the database to be created.
 
-   >**Note:** If the Import option is not visible, click the **three dots (ellipsis)** button and select Import.
+    ![eventhouse2.png](media/eventhouse2.png)
 
-3. Click on the **Upload** button.
+    >**Note:** If you see a **pop-up** like the one in the screenshot below, ignore it and proceed with the next step.
 
-   ![task-3.1.2.png](media/labMedia/exercise5_1.3.1.png)
+    ![eventhouse16.png](media/eventhouse16.png)
 
-4. Browse to the fabricnotebooks folder **"C:\LabFiles\02_lab\artifacts\fabricnotebooks"** in the VM and select **Build ML models and experiments using Copilot for Data Science in Fabric** notebook.
+5. Click on the **<inject key= "WorkspaceName" enableCopy="false"/>**  workspace from the left navigation pane and select **New item**.
 
-5. Click on the **Open** button.
+    ![st26.png](media/st26.png)
 
-   ![task-3.1.2.png](media/labMedia/exercise5_1.3.2.png)
+6. In the new item window, search for the **Eventstream** and click **Eventstream**.
 
-6. Wait for the notebook to **upload**.
+    ![st28.png](media/st28.png)
 
-   ![task-3.1.2.png](media/labMedia/exercise5_1.3.3.png)
+7. Enter the name as **RealtimeDataTo-KQL-DB** and click on the **Create** button.
 
-7. Click on the **<inject key= "WorkspaceName" enableCopy="false"/>** workspace from the left navigation pane.
+    ```
+    RealtimeDataTo-KQL-DB
+    ```
 
-   ![task-3.1.2.png](media/labMedia/exercise5_1.3.4.png)
+    ![Eventst-name1.png](media/Eventst-name1.png)
 
-8. Click on **Filter**, expand **Type** and select **Notebook**.
+8. Click on the **Connect data sources** button.
 
-   ![task-3.1.2.png](media/labMedia/exercise5_1.3.5.png)
+    ![](media/eventhouse12u.png)
 
-9. Click on the **Build ML models and experiments using Copilot for Data Science in Fabric** notebook.
+9. Click on the **Connect** button for **Azure Event Hubs**.
 
-   ![task-3.1.2.png](media/labMedia/exercise5_1.3.6.png)
+    ![](media/eventhouseconnect.png)
 
-10. Click on **+ Add data items** button and click on **Existing data sources**.
+10. Under the Connection field, click on **New connection**.
 
-      ![task-3.1.2.png](media/labMedia/l15.png)
+    ![eventhouse13.png](media/eventhouse13.png)
 
-11. Select **lakehouse**, and click on **Connect** button.
+11. Enter the value for the **Event Hub namespace** as **<inject key= "namespaces_adx_thermostat" enableCopy="true"/>**  and enter the **Event Hub** value as **thermostat**.
 
-      ![task-3.1.2.png](media/labMedia/l16.png)
+    ```
+    thermostat
+    ```
 
+    ![task-5.2.5-2.png](media/task-5.2.5-2.png)
 
-12. In the Explorer pane, click on the **ellipsis (three dots)** next to your lakehouse and select **Set as default lakehouse**.
+12. Scroll down to the **Authentication kind** dropdown and select **Shared Access Key**. In the **Shared Access Key Name** field enter **thermostat** , in the **Shared Access Key** field enter **<inject key= "eventHubPolicyPrimaryKey" enableCopy="true"/>** and then click on the **Connect** button.
 
-      ![task-3.1.2.png](media/labMedia/l17.png)
+    ![eventhouse14.png](media/eventhouse14.png)
 
+    >**Note:** Close any pop-up which appears on screen.
 
-13. Click on **Connect** dropdown in the Home Ribbon and click on **New standard session** to connect to a session.
+    ![pop-up3.png](media/pop-up3.png)
 
-      ![task-3.1.2.png](media/labMedia/standardsession.png)
+13. Select Data format as **JSON** and click on **Next** button.
 
-14. Click on the **Copilot** button and then click on the **Get Started** button.
- 
-      >**Note:** If the Copilot is not visible please click on ellipsis (three dots) **...** and select Copilot.
+    ![eventhouse15.png](media/eventhouse15.png)
 
-      ![task-3.1.2.png](media/labMedia/exercise5_1.6.png)
+    >**Note:** Wait for the connection to be established.
 
-15. Copy and paste the following **prompt** in the textbox.
+14. Click on the **Add** button.
 
-      ```
-      Load the "customerchurndata" table from the lakehouse into a Spark DataFrame. Then convert that into pandas dataframe as df
-      ```
+    ![task-5.2.1new8.png](media/task-5.2.1new8.png)
 
-16. Click on the **send** button.
+15. In the Eventstream canvas, click on the **Add destination** dropdown and select **Eventhouse**.
 
-      ![task-3.1.2.png](media/labMedia/exercise5_1.8.png)
+    ![sel-kql-db.png](media/sel-kql-db.png)
 
-17. Click on the **Copy code** icon.
+16. Select the **Event processing before ingestion** radio button, enter **RealTimeData** as the Destination name.
 
-      >**Note:** The new cell will be created right above the cell.
+17. In the **Workspace** field select **<inject key= "WorkspaceName" enableCopy="false"/>**. 
 
-      ![task-3.1.2.png](media/labMedia/exercise5_1.8.2.png)
+18. In the **Eventhouse** dropdown select **Contoso-Eventhouse**.
 
-18. Hover above the first cell and then click on a **+ Code** icon.
+18. In the **KQL Database** dropdown select **Contoso-Eventhouse**.
 
-      >**Note:** The new cell will be created right above the existing cell.
+19. In the **KQL Destination table** field, click on **Create new** button.
 
-      ![task-3.1.2.png](media/labMedia/exercise5_1.8.1.png)
+    ![eventhouse5.png](media/eventhouse5.png)
 
-19. Paste the copied **query** and run the new **cell**.
+20. Enter the table name as **thermostat** and then click on the **Done** button.
 
-      ![task-3.1.2.png](media/labMedia/exercise5_1.9.png)
+    ![eventhouse6.png](media/eventhouse6.png)
 
-      >**Note:** Copilot may not respond as expected, please copy and paste the following code if the code execution fails:
+21. Enter the Input data format as **Json**.
 
-      ```
-      # Load the table into a Spark DataFrame
-      spark_df = spark.table('lakehouse.customerchurndata')
- 
-      # Convert the Spark DataFrame to a pandas DataFrame
-      df = spark_df.toPandas()
-      ```
+    >**Note:** Zoom-out on your screen if the **Input data format field** is not visible.
 
-      >**Note:** It may take some time for the copilot to generate query.
+    ![eventhouse7.png](media/eventhouse7.png)
 
-With the data prepared with the help of Copilot, Data Scientists like you can explore the data to understand the patterns it contains.
+22. Drag Arrow from 'RealtimeDataTo-KQL' and connect it to 'RealTimeData'.
 
-The rest of the notebook has similar PySpark queries to explore customer churn prediction.
+    ![eventhouse8.png](media/eventhouse8.png)
 
+23. Click on the **Publish** button.
 
-### Task 5.2: Leverage AI skills
+    ![task-5.2.15.png](media/task-5.2.15.png)
 
-AI Skill, a new capability in Fabric, allows Data Analysts like Serena to create their own generative AI experiences. Serena believes that generative AI offers a transformative way to interact with data, significantly boosting data-driven decision-making in organizations worldwide. 
+    >**Note:** Wait for the data ingestion from EventHub to KQL DB, In the RealTimeData canvas, the status will appear as **Active**, confirming that the streaming has started successfully.
 
-In this exercise, you’ll step into Data Analyst, Serena’s shoes and leverage AI Skill to create conversational question-and-answer (Q&A) systems. 
+24. Once you see that the streaming has started, click on **Refresh** and wait for the data to preview.
 
-1. Click on the **<inject key= "WorkspaceName" enableCopy="true"/>** workspace from the left navigation pane.
+    ![eventhouse17.png](media/eventhouse17.png)
 
-   ![task-3.1.2.png](media/labMedia/exercise5_1.3.4.png)
+Real-time data from the event hub has been ingested successfully into the KQL Database. Next, as customers walk in aisles and the temperatures fluctuate, let us see how KQL queries proactively identify anomalies and help maintain an optimal shopping experience!
 
-2. Click on **New item** and search for **Data agent**. select **Data agent(Preview)**.
+---
 
-   ![task-5.2](media/labMedia/l21.png)
+### Task 5.2: Analyze and discover patterns, identify anomalies and outliers using Copilot
 
-3. In the **Create data agent** pop-up: Enter **Contoso-assistant** in the name field and click on **Create** button.
+Kusto Query Language (KQL) is a powerful tool. In this scenario KQL is used to explore Contoso's data, discover patterns, identify anomalies and outliers, create statistical modeling, and more.
 
-   ```BASH
-   Contoso-assistant
-   ```
+We use KQL to query the thermostat data that's streaming in near real-time from the devices installed in Contoso's stores.
 
-   ![task-5.2](media/labMedia/l22.png)
+1. Click on the **<inject key= "WorkspaceName" enableCopy="false"/>** workspace from the left navigation pane and select **New item**.
 
-4. In the Explorer pane, click on **+ Data source**.
+    ![st26.png](media/st26.png)
 
-   ![task-5.2](media/labMedia/data938.png)
+2. In the new item window, search for the **KQL Queryset** and click **KQL Queryset**.
 
-5. Select **Lakehouse** from the available options, and then click **Add** to include it as a data source.
+    ![st29.png](media/st29.png)
 
-   ![task-5.2](media/labMedia/l23.png)
+4. In the KQL Queryset name field, +++Query Thermostat Data in Near Real-time using KQL Script+++ and click on the **Create** button.
 
-6. Click on **Refresh** button.
+    ![task-5.3.3.png](media/task-5.3.3.png)
 
-   ![task-5.2](media/labMedia/refresh9.png)
+    >**Note:** Close any pop-up which appears on screen.
 
-7. Under lakehouse dropdown, expand **dbo**, and select the following tables as shown in the screenshot.
+    ![st30.png](media/st30.png)
 
-   - dimcustomer
-   - dimdate
-   - dimproduct
-   - dimreseller
-   - factinternetsales
-   - factresellersales
+5. **Wait** for the query set creation and a new screen will display. In this screen, click on **Contoso-Eventhouse**, verify the workspace name and then click on the **Connect** button.
 
-      ![task-5.2](media/labMedia/items.png)
+    ![eventhouse10.png](media/eventhouse10.png)
 
-   >**Note:** If the tables are not visible, hard refresh the VM browser using **Ctrl + Shft + R**.
+6. Place your cursor inside the **query** field, select all using **Ctrl + A** and **delete** the pre-written query.
 
-8. In the chatbox, type **What is the most sold product?** and click the **Send** icon to submit your query. Once the answer appears, expand the response by clicking the **1 step completed** dropdown icon beneath it to view the underlying SQL query result.
+    ![task-5.3.5.png](media/task-5.3.5.png)
 
-   ```BASH
-   What is the most sold product?
-   ```
-   ![task-5.2](media/labMedia/AIskill7.png)
+7. Click on the **Copilot** button.
 
-   >**Note:** This may take some time; wait until a response is received.
+    ![st31.png](media/st31.png)
 
-9. Data agent answered the question fairly well based on the selected tables.
+8. **Paste** the query provided below in the Copilot query section.
 
-   However, the SQL query needs some improvement, it orders the products by order quantity, when total sales revenue associated with the product is the most important consideration, as shown in the above screenshot.
+    ```
+    Create a query to summarize average temperature every 1 min in line chart
+    ```
 
-   To improve the query generation, let's provide some instructions, as shown in these examples:
+9. Click on the **Send** icon.
 
-   ```
-   Whenever I ask about "the most sold" products or items, the metric of interest is total sales revenue and not order quantity.
+    >**Note:** Note: If you receive a response from Copilot such as "I am not sure" please ask the question again.
 
-   The primary table to use is FactInternetSales. Only use FactResellerSales if explicitly asked about resales or when asked about total sales.
-   ```
+    >**Note:** The responses from Copilot may not match the ones in the screenshot but will provide a similar response. 
 
-10. Copy the above notes and click on the **AI Instructions** paste it in **AI instruction** input box. 
-11. Type **What is the most sold product?** in the chatbox and then click on the **Send** button.  
+10. Click on the **Insert** button.
 
-      ```BASH
-      What is the most sold product?
-      ```
+    ![kqlqueyset1 - Copy.png](media/kqlqueyset1 - Copy.png)
 
-Asking the question again returns a different answer, **Mountain-200 Black, 46**, as shown in the below screenshot:
+11. Place your cursor in the **script field**, click on the **Run** button and you get the desired result.
 
-![task-5.2](media/labMedia/aiinstruction.png)
+    ![task-5.3.8 - Copy.png](media/task-5.3.8 - Copy.png)
 
-In addition to instructions, examples serve as another effective way to guide the AI. If you have questions that your AI skill often receives, or questions that require complex joins.
 
-12. Click on the **Example queries** In the Example queries click on **edit** icon.
-
-      ![task-5.2](media/labMedia/l26.png)
-
-13. Click on **+ Add Example**, enter the provided question along with its corresponding SQL query, and then click the **Close (X)** button.
-
-      ![task-5.2](media/labMedia/l27.png)
-
-|Question| SQL query|
-|--------|----------|
-|who are the top 5 customers by total sales amount?|SELECT TOP 5 CONCAT(dc.FirstName, ' ', dc.LastName) AS CustomerName, SUM(fis.SalesAmount) AS TotalSpent FROM factinternetsales fis JOIN dimcustomer dc ON fis.CustomerKey = dc.CustomerKey GROUP BY CONCAT(dc.FirstName, ' ', dc.LastName) ORDER BY TotalSpent DESC;|
-
->**Note** : After entering the first example and query, click the **+ Add Example** button.
-
-
-14. Type **who are the top 5 customers by total sales amount?** in the chatbox and click on **Send** button.
-
-      ```BASH
-      who are the top 5 customers by total sales amount?
-      ```
-
-      ![task-5.2](media/labMedia/l28.png)
-
-15. Click on **Publish**.
-
-      ![task-5.2](media/labMedia/AIskill13.png)
-
-16. In the pop-up screen click on the **Publish** button.
-
-      ![task-5.2](media/labMedia/AIskill14.png)
-
-17. Notice that AI skill is published successfully.
-
-      ![task-5.2](media/labMedia/AIskill15.png)
+Imagine one of the aisles had a sudden rise in temperature due to an anomaly. Customers start leaving that aisle and the wait times in the checkout lines start to increase but thanks to the KQL Queries, those anomalies would be tracked, and immediately notifications would be generated to bring the aisle temperature back to optimal levels! 

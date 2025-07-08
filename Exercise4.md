@@ -1,196 +1,177 @@
-### Exercise 4: Real-time Intelligence experience: Explore Streaming data using Copilot for KQL DB (Optional)
 
-Imagine, it is 6 am on the day of Contoso's big Thanksgiving sale. Customers are flocking to their stores in large numbers. We are about to witness the very culmination of Contoso's phenomenal transformation with Microsoft Fabric and Azure Databricks. Specifically, we will see how near real-time data is used to make decisions for the next moment in Contoso's stores to ensure optimal temperatures are maintained for their customers while they shop at the big sale!
+### Exercise 4: Power BI Experience in Fabric (Optional)
+ With the wide spectrum of data sources and Litware's data in OneLake, it is now time to get some awesome insights and visualizations from this data. Let's dive deep into the experience of the Business Analyst, Wendy, and do just that.
 
-### Task 4.1: Ingest real-time data into Eventhouse using Eventstream
+### Task 4.1: Create a Semantic model and generate insights using Copilot for Power BI
 
-In the exercise, we’ll explore how Data Engineer, Eva, ingested real-time data from the event hub into the KQL Database to monitor in-store temperatures in real time.
+Based on all the gathered data, Wendy is expected to create Power BI reports for other data citizens and stakeholders. Let's step into her shoes to experience the power of Copilot for Power BI in conjunction with Direct Lake Mode.
 
-1. Select **<inject key= "WorkspaceName" enableCopy="true"/>** workspace from the left navigation pane, click on **+New item**, then scroll down to the **Store data** section, and click on **Eventhouse**.
 
-    ![task-5.4551.png](media/labMedia/RTIEventhouse.png)
+1. Navigate back to the Microsoft Fabric tab on your browser.
 
-    >**Note:** If you see a pop-up like the following one, click on the **Don't save** button.
+2. Click on **Workspaces** and select **<inject key= "WorkspaceName" enableCopy="false"/>**.
 
-    ![donotsave.png](media/labMedia/donotsave.png)  
+    ![task-1.3.02.png](media/l14.png)
 
-2. In the **Eventhouse name** field enter **Contoso-Eventhouse**.
+4. Click on the **lakehouse**.
 
-    ```
-    Contoso-Eventhouse
-    ```
+    ![st17.png](media/st17.png)
 
-3. Click on the **Create** button and wait for the database to be created.
+5. Click on the **New semantic model** button. 
 
-    ![eventhouse2.png](media/labMedia/eventhouse2.png)
+    ![st18.png](media/st18.png)
 
-    >**Note:** If you see a **pop-up** like the one in the screenshot below, ignore it and proceed with the next step.
-
-    ![eventhouse16.png](media/labMedia/eventhouse16.png)
-
-4. Select **<inject key= "WorkspaceName" enableCopy="true"/>** workspace from the left navigation pane, click on **+New item**, then scroll down to the **Prepare data** section, and click on **Eventstream**.
-
-    ![eventhouse3.png](media/labMedia/f46.png)
-
-    >**Note :** If you have 10 items in the left navigation, you won't be able to create an Eventstream. Remove any unnecessary items and then proceed to create the Eventstream.
-
-5. Enter the name as **RealtimeDataTo-KQL-DB** and click on **Create** button.
+6. In the **Name** field, enter **website_bounce_rate_model**.
 
     ```
-    RealtimeDataTo-KQL-DB
+    website_bounce_rate_model
     ```
 
-    ![Eventst-name1.png](media/labMedia/Eventst-name1.png)
+7. Search for **website_bounce_rate**, scroll down and select **website_bounce_rate** table, then click on the **Confirm** button.
 
-6. Click on **Connect data sources**. 
+    ![st19.png](media/st19.png)
 
-    ![eventhouse12.png](media/labMedia/eventhouse12.png)
+    >**Note**: Wait for the **semantic model** creation.
 
-7. Click on the **Connect** button for **Azure Event Hubs**.
+8. Select **Settings** and **Power BI settings** from the 'Resources and extensions' section.
 
-    ![task-5.2.1new1.0.4.png](media/labMedia/task-5.2.1new1.0.4.png)
+    ![task-new6.1 new.png](media/task-new6.1.png)
 
-8. Under the Connection field, click on **New connection**.
+    >**Note:** If the settings icon is not visible, click on the three dots next to Profile icon and select Settings.
 
-    ![eventhouse13.png](media/labMedia/eventhouse13.png)
+    ![epllipsis.png](media/epllipsis.png)
 
-9. Enter the value for the **Event Hub namespace** as **<inject key= "eventhubNamespace" enableCopy="true"/>** and enter the **Event Hub** value as **thermostat**.
+9. Click on the **Semantic models** tab and select **website_bounce_rate_model** semantic model from the left pane.
 
-    ```BASH
-    thermostat
-    ```
-    ![task-5.2.5-2.png](media/labMedia/task-5.2.5-2.png)
+    ![task-new6.2 - Copy.png](media/task-new6.2.png)
 
-10. Scroll down and select **Shared Access Key** from Authentication kind dropdown, enter the Shared Access Key Name as **thermostat**.
+10. Scroll down to **Q&A** section and expand it, then select **Turn on Q&A to ask natural language questions about your data** checkbox, and click on **Apply**.
 
-    ```BASH
-    thermostat
-    ```
-11. Provide the **Shared access Key** as: **<inject key= "EventHubPolicyPrimaryKey" enableCopy="true"/>** and click on **Connect** button.
+    ![task-new6.3 - Copy.png](media/task-new6.3.png)
 
-    >**Note:** Do not check in box to allow connection to be utilized with either on-premises or VNet data gateways if appears.
+    >**Note :** If Turn on Q&A to ask natural language questions about your data checkbox is enabled already,continue with the next step.
 
-    ![eventhouse14.png](media/labMedia/eventhouse14.png)
+11. Navigate back to workspace and Select the ellipsis (three dots) next to the **website_bounce_rate semantic** model.
 
-    >**Note:** Close any pop-up which appears on screen.
+    ![st20.png](media/st20.png)
 
-    ![pop-up3.png](media/labMedia/pop-up3.png)
+12. To create a new report using this semantic model, click on **Create report**.
+ 
+    ![st21.png](media/st21.png)
 
-12. Select Data format as **JSON** and click on **Next** button.
+14. Click the **Try Free** button in the pop-up window.
 
-    ![eventhouse15.png](media/labMedia/eventhouse15.png)
+    ![gotit.png](media/gotit.png)
 
-    >**Note:** Wait for the connection to be established.
+15. In the confirmation dialog, click the **Got it** button to continue.
 
-13. Click on the **Add** button.
+13. Click on the **Copilot** icon and collapse the other panes named Filters, **Visualizations** and **Data**.
 
-    ![task-5.2.1new8.png](media/labMedia/task-5.2.1new8.png)
+    ![task-new6.4 - Copy.png](media/task-new6.4.png)
 
-14. In the Eventstream canvas, click on the **Add destination** dropdown and select **Eventhouse**.
+    >**Note:** Close any pop-up that appears on the screen.
 
-    ![sel-kql-db.png](media/labMedia/sel-kql-db.png)
+    ![coplitclose.png](media/coplitclose.png)
 
-15. Select the **Event processing before ingestion** radio button, in the **Destination name** field enter **RealTimeData**.
+14. Click on **Get started**.
 
-    ```
-    RealTimeData
-    ```
+    ![task-new6.5 - Copy.png](media/l2.png)
 
-16. In the **Workspace** field select <inject key="WorkspaceName" enableCopy="true"/>. 
 
-17. In the **Eventhouse** dropdown select **Contoso-Eventhouse**.
+You will now see how easy it is for the data analyst to create compelling Power BI reports and get deep insights with literally no hands-on coding!
+	
+17. Click on the **Prompt Guide** button.
 
-18. In the **KQL Database** dropdown select **Contoso-Eventhouse**.
+    ![promptguide.png](media/promptguide.png)  
 
-19. In the **KQL Destination table** field, click on **Create new** button..
+18. Select the option **What's in my data?**
 
-    ![eventhouse5.png](media/labMedia/eventhouse5.png)
-
-20. Enter the table name as **thermostat** and then click on the **Done** button.
+    > **Note:** If you don't see the 'What's in my data?' option, click in the **Copilot chat box** field, enter the prompt below, and click the **Send** button: 
 
     ```
-    thermostat
+    What's in my data?
     ```
-    ![eventhouse6.png](media/labMedia/eventhouse6.png)
+    ![promptguide2.png](media/promptguide2.png)
 
-21. In the **Input data format** dropdown select **Json** and click on the **Save** button.
+The first option, 'What's in my data?' provides an overview of the contents of the dataset, identifies and describes what's in it and what the attributes are about. So, there's no need to wait for someone to explain the dataset. This improves the efficiency and volume of report creation.
 
-    >**Note:** Zoom-out on your screen if the **Input data format field** is not visible.
+![promptguide2.1.png](media/promptguide2.1.png)
 
-    ![eventhouse7.png](media/labMedia/eventhouse7.png)
-
-22. Drag Arrow from **RealtimeDataTo-KQL** and connect it to **RealTimeData**.
-
-    ![eventhouse8.png](media/labMedia/eventhouse8.png)
-
-23. Click on the **Publish** button.
-
-    ![task-5.2.15.png](media/labMedia/task-5.2.15.png)
-
-    >**Note:** Wait for the data ingestion from EventHub to KQL DB, In the RealTimeData canvas, the status will appear as **Active**, confirming that the streaming has started successfully.
-
-24. Once you see that the streaming has started, click on **Refresh** and wait for the data to preview.
-
-    ![eventhouse17.png](media/labMedia/eventhouse17.png)
-
-Real-time data from the event hub has been ingested successfully into the KQL Database. Next, as customers walk in aisles and the temperatures fluctuate, let us see how KQL queries proactively identify anomalies and help maintain an optimal shopping experience!
-
----
-
-### Task 4.2: Analyze and discover patterns, identify anomalies and outliers using Copilot
-
-Kusto Query Language is a powerful tool. In this scenario KQL is used to explore Contoso’s data, discover patterns, identify anomalies and outliers, create statistical modeling, and more.
-
-We use KQL to query the thermostat data that’s streaming in near real-time from the devices installed in Contoso’s stores.
-
-1. Select **<inject key= "WorkspaceName" enableCopy="true"/>** workspace from the left navigation pane, click on **+New item**, then scroll down to the **Track data** section, and click on **KQLQueryset**.
-
-    ![task-5.3.1.png](media/labMedia/RTIQueryset.png)
-
-
-2. In the **KQL Queryset name** field, copy-paste the following, **Query Thermostat Data in Near Real-time using KQL Script** and then click on the **Create** button.
+19. Click on the Copilot chat box field and enter the prompt below.
 
     ```
-    Query Thermostat Data in Near Real-time using KQL Script
-    ```
+    Create a detailed page to analyze the Website Bounce Rate
+    ``` 
 
-    ![task-5.3.3.png](media/labMedia/task-5.3.3.png)
+    >**Note:** Wait for the prompt to populate.
 
-3. **Wait** for the query set creation and Expand **+Add data source** and Click on **Eventhouse/KQL Database**. 
+20. Click on the **Send** button and wait for the results to load. 
 
-   ![eventhouse10.png](media/labMedia/E5I1.png)
-4. In this screen, click on **Contoso-Eventhouse**, verify the workspace name and then click on the **Connect** button.
+    ![st22.png](media/items.png)
+	
+    >**Note:** If you see the error message saying, 'Something went wrong.', try refreshing the page and restart the task. Being in a shared environment, the service may be busy at times.
+    >- If Copilot needs additional context to understand your query, consider rephrasing the prompt to include more details.
 
-    ![eventhouse10.png](media/labMedia/eventhouse10.png)
+    >**Note:** The responses from Copilot may not match the ones in the screenshot but will provide a similar response.
 
-    >**Note:** If **Welcome to KQL Queryset!** pup-up appears click on **Not Now** or close the pop-up.
+    ![st23.png](media/st23.png)
 
-4. Place your cursor inside the **query** field, select all using **Ctrl + A** and **delete** the pre-written query.
+Based on this report, we notice that the website bounce rate for Contoso is especially high amongst the Millennial customer segment. Let's ask Copilot if it has any recommendations for improving this bounce rate based on the results and data in the report.
 
-    ![task-5.3.5.png](media/labMedia/task-5.3.5.png)
+We'll ask Copilot for suggestions based on the results and data in the report. 
 
-5. Click on the **Copilot** button.
-
-    ![eventhouse11.png](media/labMedia/eventhouse11.png)
-
-6. **Paste** the query provided below in the Copilot query section.
+21. Enter the following prompt in Copilot, and press the **Send** button.
 
     ```
-    Create a query to summarize average temperature every 1 min in line chart
+    Based on the data in the page, what can be done to improve the bounce rate of millennials?
+    ``` 
+	
+  ![task-new13.png](media/img-12.png)
+	
+22. Look at the suggestions Copilot provided. Copilot creates the desired Power BI report and even goes a step further to give powerful insights. Wendy realizes that for the website bounce rate to improve, Contoso needs to transform their mobile website experience for millennials. This helps them reduce their millennial related customer churn too! Now, what if Contoso's leadership team needed a quick summary of this entire report? **Smart Narrative** to the rescue! 
+	
+    ![task-new14.png](media/task-new14.png)
+
+23. It is also possible to apply some formatting using Copilot. Enter the following prompt in Copilot, and press the **Send** button.
+
+    >**Note:** If the chart you are trying to replace does not exist in the report was generated by Copilot try replacing another visual.
+
+    ```
+    Replace Bounce Rate by Customer Generation chart with a Bar Chart.
     ```
 
-7. Click on the **Send** icon.
+    ![st24.png](media/st24.png)
 
-    >**Note:** If you receive a response from Copilot such as "I am not sure" please ask the question again.
+24. Notice that now the top right column chart has been replaced with a bar chart.
 
-    >**Note:** The responses from Copilot may not match the ones in the screenshot but will provide a similar response. 
+    ![st25.png](media/st25.png)
+	
+25. Expand the **Visualizations** pane and select the **Narratives** visual. 
 
-8. Click on the **Insert** button.
+    ![visualizations.png](media/visualizations.png)
 
-    ![kqlqueyset1.png](media/labMedia/kqlqueyset1.png)
+26. Adjust and expand the **narrative box** from the corner to get a better readable view of the result.
+ 
+    ![expand-arrow.png](media/expand-arrow.png)
+ 
+27. Click on the **Copilot (preview)** button within the visual.
+ 
+    ![pbi-nv.png](media/pbi-nv.png)
+   
+28. Click on **Give an executive summary**.
+ 
+    >**Note:** If you see the prompt populated in the Copilot text box move to the next step otherwise, click on the **Copilot narrative** text box, enter the given prompt, and then click on **Update**
+    
+    ```
+    Summarize the data, provide an executive summary, indicating important takeaways.
+    ``` 
 
-9. Place you cursor in the **script field**, click on the **Run** button and you get the desired result.
-
-    ![task-5.3.8.png](media/labMedia/task-5.3.8.png)
-
-Imagine one of the aisles had a sudden rise in temperature due to an anomaly. Customers start leaving that aisle and the wait times in the checkout lines start to increase but thanks to the KQL Queries, those anomalies would be tracked, and immediately notifications would be generated to bring the aisle temperature back to optimal levels!
+    ![task-new16.png](media/task-new16.png)
+ 
+29. Click on the **Close** button in the pop-up window.
+ 
+    ![close-copilot.png](media/close-copilot.png)
+ 
+See how easy it was to get an executive summary with absolutely no IT resource dependency!
+	
+The summary could also be generated in another language, if specified. Additionally, the summary updates if you filter the report on any visual.

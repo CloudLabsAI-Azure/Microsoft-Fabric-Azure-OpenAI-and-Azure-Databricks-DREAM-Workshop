@@ -1,186 +1,225 @@
 
-### Exercise 3: Power BI Experience in Fabric
+## Exercise 3: Building an AI-Powered Chatbot with Microsoft Fabric and Azure AI Studio
 
-With the wide spectrum of data sources and Litware's data in OneLake, it is now time to get some awesome insights and visualizations from this data. Let's dive deep into the experience of the Business Analyst, Wendy, and do just that.
+Contoso encountered a major issue with customer churn, especially among millennials. The executives at Contoso struggled to understand this customer segment and figure out how to earn their loyalty. Despite having extensive data from customer interactions, surveys, and market research, Contoso found it difficult to pinpoint the root cause of the churn and determine effective solutions. 
 
-### Task 3.1: Create a Semantic model and generate insights using Copilot for Power BI
+The main problem was the lack of integration in their existing systems. This prevented Contoso's executives from utilizing their data for root cause analysis and strategic insights, which in turn, hampered their ability to improve marketing strategies, product offerings, and customer experiences. 
 
+To solve the data silos issue, Contoso implemented an advanced AI solution using Azure OpenAI, Azure AI Search, and Microsoft Fabric. Once the team discovered that millennials were leaving because they couldn't find products, they developed an Azure OpenAI-powered shopping assistant to help with product search and recommendations. 
 
-Based on all the gathered data, Wendy is expected to create Power BI reports for other data citizens and stakeholders. Let's step into her shoes to experience the power of Copilot for Power BI in conjunction with Direct Lake Mode.
+In this exercise, we will learn how they achieved this! 
 
-1. Navigate back to the Microsoft Fabric tab on your browser.
+### Task 3.1: Integrate Fabric data with Azure AI Studio using Azure AI Search
 
-2. Click on **Workspaces** in the side bar and select **<inject key= "WorkspaceName" enableCopy="false"/>**.
+Let's step into the shoes of Eva, the Data Engineer, as she launches Azure AI Studio and leverages data stored in Microsoft OneLake as knowledge base.
 
-    ![task-1.3.02.png](media/labMedia/task-1.3.02.png)
-
-3. Click on **Filter** and under the **Type**, select **Lakehouse**.
-
-    >**Note:** Please collapse **Task filter** if **Type filter** is not seen.
-
-    ![task-1.3-ext-shortcut1.png](media/labMedia/task-1.3-ext-shortcut1.png)
-
-4. Click on the **lakehouse**.
-
-    >**Note:** There are 3 options for lakehouse, namely Lakehouse, Semantic model(Default) and SQL endpoint. Make sure you select the **Lakehouse** option.
-
-    ![task-wb11.png](media/labMedia/task-wb11.png)
-
-5. Click on the **New semantic model** button. 
-
-    ![task-new4.png](media/labMedia/task-new4.png)
-
-6. In the **Direct Lake semantic model name** field enter **website_bounce_rate_model**.
-
-    ```BASH
-    website_bounce_rate_model
-    ```
-
-7. Select workspace as **<inject key= "WorkspaceName" enableCopy="false"/>** and click on expand icon next to **dbo** checkbox.
-
-    >**Note:** If you experience screen resolution issues or certain items are not visible, try adjusting the VM browser window size or resolution settings.
-
-    ![task-new5.png](media/labMedia/task-new5.png)
-
-8. Click on expand icon next to **Tables** checkbox and scroll down.
-
-    ![task-new5.1.png](media/labMedia/task-new5.1.png)
-
-9. Scroll down in the **New Semantic model** pop-up and select **website_bounce_rate** table and click on the **Confirm** button. 
-
-    ![task-new6.png](media/labMedia/task-new6.png)
-
-    >**Note:** Wait for the semantic model creation.
-
-10. Click on the **<inject key= "WorkspaceName" enableCopy="false"/>** from the left navigation menu, click on **Filter** and under **Type** select **Semantic model.**
-
-11. Click on **website_bounce_rate_model** semantic model.
-
-    ![task-new6.png](media/labMedia/f56.png)
-
-12. To create a new report using this semantic model, Click on **three dots ...** and click on **Create report**.
-
-    ![task-new7.png](media/labMedia/f58.png)
-
-    >**Note**: If you get a popup prompting you to upgrade to a Paid **Power BI Pro license**, simply click on the **Try free** button to activate the **Power BI Pro trial**, and click on **Got it**.
-
-    ![task-new7.png](media/labMedia/tryfree.png)
-
-13. Click on **Settings** icon and select **Power BI settings** from the 'Resources and extensions' section.
-
-    >**Note:** If the Settings icon is not visible, click on the **ellipsis** in the top-right corner and then select **Settings**.
-
-    ![task-new6.1.png](media/labMedia/task-new6.1.png)
-
-14. Click on the **Semantic models** tab and select **website_bounce_rate_model** semantic model from the left pane.
-
-    ![task-new6.2.png](media/labMedia/task-new6.2.png)
-
-15. Scroll down to **Q&A** section and expand it, then select **Turn on Q&A to ask natural language questions about your data** checkbox, and click on **Apply**.
-
-    ![task-new6.3.png](media/labMedia/task-new6.3.png)
-
-16. Click on **Untitled report** from the left pane.
-
-    ![task-new6.3.png](media/labMedia/qna1.png)
-
-17. Click on the **Copilot** icon and collapse the other panes named Filters, Visualizations and Data.
-
-    ![task-new6.4.png](media/labMedia/task-new6.4.png)
-
-    >**Note:** Close any pop-up that appears on the screen.
-
-    ![coplitclose.png](media/labMedia/coplitclose.png)
-
-18. Click on **Preview button** to the right side to enable it and click on **Get started**.
-
-    ![task-new6.5.png](media/labMedia/task-new6.5.png)
-
-    >**Note** : If the above steps are not visible, you can skip them and proceed to the next step.
-    
-You will now see how easy it is for the data analyst to create compelling Power BI reports and get deep insights with literally no hands-on coding!
-	
-19. Click on the **Prompt Guide** button.
-
-    ![promptguide.png](media/labMedia/promptguide.png)  
-
-20. Select the option **What's in my data?**
-
-    > **Note:** If you don't see the 'What's in my data?' option, click in the **Copilot chat box** field, enter the prompt below, and click the **Send** button: 
-
-    ```
-    What's in my data?
-    ```
-
-    ![promptguide2.png](media/labMedia/promptguide2.png)
-
-
-The first option, 'What’s in my data?' provides an overview of the contents of the dataset, identifies and describes what’s in it and what the attributes are about. So, there’s no need to wait for someone to explain the dataset. This improves the efficiency and volume of report creation.
-
-![promptguide2.1.png](media/labMedia/promptguide2.1.png)
-
-21. Click in the **Copilot chat** box field and enter the **prompt** below.
-
-    ```
-    Create a detailed page to analyze the Website Bounce Rate 
-    ```
-    >**Note:** Wait for the prompt to populate.
-
-22. Click on the **Send** button and wait for the results to load. 
-
-    ![query01.png](media/labMedia/itemss.png)
-	
-    >**Note:** If you see the error message saying, 'Something went wrong.', try refreshing the page and restart the task. Being in a shared environment, the service may be busy at times.
-    > - If Copilot needs additional context to understand your query, consider rephrasing the prompt to include more details.
-
-    >**Note:** The responses from Copilot may not match the ones in the screenshot but will provide a similar response.
-
-    ![query01.1.png](media/labMedia/query01.1.png)
-
-
-Based on this report, we notice that the website bounce rate for Contoso is especially high amongst the Millennial customer segment. Let’s ask Copilot if it has any recommendations for improving this bounce rate based on the results and data in the report.
-
-We’ll ask Copilot for suggestions based on the results and data in the report. 
-
-23. Enter the below prompt in Copilot, and press the **Send** button.
-
-    ```
-    Based on the data in the page, what can be done to improve the bounce rate of   millennials? 
-    ```
-	
-    ![task-new13.png](media/labMedia/img-12.png)
-	
-24. Look at the suggestions Copilot provided. Copilot creates the desired Power BI report and even goes a step further to give powerful insights. Wendy realizes that for the website bounce rate to improve, Contoso needs to transform their mobile website experience for millennials. This helps them reduce their millennial related customer churn too! Now, what if Contoso’s leadership team needed a quick summary of this entire report? **Smart Narrative** to the rescue! 
-	
-    ![task-new14.png](media/labMedia/task-new14.png)
-	
-25. Expand the **Visualizations** pane and select the **Narratives** visual. 
-
-    ![visualizations.png](media/labMedia/visualizations.png)
-
-26. Adjust and expand the **narrative box** from the corner to get a better readable view of the result.
-
-    ![open-narrative.png](media/labMedia/expand-arrow.png)
-
-27. Click on **Copilot (preview)** button within the visual.
-
-    ![open-narrative.png](media/labMedia/open-narrative.png)
-	
-28. Click on **Give an executive summary**. 
-
-29. Click on **Update** and observe the generated summary. See how easy it was to get an executive summary with absolutely no IT resource dependency!
+1. Navigate back to the Microsoft Fabric tab on your browser (https://app.fabric.microsoft.com).
  
-    > **Note:** If you see the prompt populated in the Copilot text box move to the next step otherwise, click on the **Copilot narrative** text box, enter the given below prompt, and then click on Update.
+2. Click on **Workspaces** and select **<inject key= "WorkspaceName" enableCopy="false"/>**.
+ 
+   ![task-1.3.02.png](media/l14.png)
+
+3. Click **Manage access**.
+
+   ![th07.png](media/th07.png)
+
+4. Click **+ Add people or groups**.
+
+   ![th08.png](media/th08.png)
+
+5. Type **<inject key= "Search_service" enableCopy="true"/>**, select **Contributor** from the permission dropdown, and then click **Add**.
+
+   ![th09.png](media/th09.png)
+
+6. Click on **<inject key= "WorkspaceName" enableCopy="false"/>** from the left-hand side menu, then select **Lakehouse**.
+
+   ![th03.png](media/th03.png)
+
+7. Copy the **browser URL** as shown in the screenshot, and paste it into your notepad for later use.
+
+   ![th04.png](media/th04.png)
+
+8. Open the following Search service in the VM browser new window: **<inject key= "searchservice" enableCopy="true"/>** 
+
+9. In the Search service, click on the **Import data** option to begin setting up the data source.
+
+   ![th05.png](media/th05.png)
+
+10. In the **Existing data source** dropdown, select the **OneLake files (preview)** option.
+
+      ![th06.png](media/th06.png)
+
+11. In the Connect to your data section, configure the following fields:
+
+- **Data Source**: **OneLake files (preview)**.
+
+- **Data source name**: **onelake**.
+
+- **Data to extract**: **All metadata**.
+
+- **Parsing mode**: **JSON array**.
+
+- **Connect by**: **Lakehouse URL**.
+
+- **Lakehouse URL**: Paste the Lakehouse URL you copied in the **Step 7**.
+
+- **Lakehouse folder/shortcut**: **products**.
+
+- **Managed identity authentication**: **System-assigned**.
+
+12. Click on **Next: Add cognitive skills (Optional)** to proceed.
+
+      ![th20.png](media/th20.png)
+
+13. Click on **Skip to: Customize target index** to proceed.
+
+      ![th10.png](media/th10.png)
+
+14. Provide in the **Index name** field as **onelake-index**.
+
+15. Provide in the **Key** field as **id**.
+
+      ![th11.png](media/th11.png)
+
+16. Ensure all fields have **Retrievable**, **Filterable**, **Sortable**, **Facetable**, and **Searchable** options checked as shown in the screenshot.
+
+
+17. Once the field settings are configured, click on **Next: Create an indexer** to proceed.
+
+      ![st05.png](media/createindexer.png)
+
+18. Enter the name of the indexer as **onelake-indexer** and click on the **Submit** button.
+
+      ![th13.png](media/th13.png)
+
+
+---
+
+### Task 3.2: Establish Azure OpenAI, Azure AI Content Safety, and AI Search Connections in Azure AI Studio
+
+Contoso integrated all of their data sources using Microsoft Fabric, including customer feedback, sales records, social media interactions, and encompassing internal company policy documents such as SOPs and research articles on customer behavior into Azure AI Search. 
+This created a unified, searchable knowledge base. 
+
+Let's step into Data Engineer, Eva's shoes to see how.
+
+
+1. In Azure portal Search for the **prj-build-<inject key= "DeploymentID" enableCopy="false"/>**, and select **prj-build-<inject key= "DeploymentID" enableCopy="false"/>** service from the results.
+
+   ![st04.png](media/prj.png)
+    
+3. Click on the **Studio web URL**.
+
+   ![st04.png](media/std.png)
+
+   >**Note:** Close any pop-up that appears on the screen throught the lab.
+
+   ![st04.png](media/st04.png)
+
+   >**Note:** Click on the **Expand** icon, if the left navigation is hidden.
+
+   ![prjexpand.png](media/prjexpand.png)
+
+2. Scroll down and click on the **Management center** from the bottom of the navigation menu.
+
+   ![th14.png](media/th14.png)
+
+3. Click **Connected resources** and select **New connection**.
+
+   ![th15.png](media/th15.png)
+
+4. Select **Azure OpenAI**.
+
+   ![ai_4.png](media/ai_4.png)
+
+5. You will find an Azure OpenAI resource with gpt-4o and text-embedding-ada-002 model deployment. Create a connection by clicking on the **Add connection** button.
+
+   ![st07.png](media/E31.png)
+
+6. Once the **OpenAI services are connected**, click on **Back to select an asset type**.
+
+   ![st08.png](media/deopenai2.png)
+
+7. Click on **Azure AI Search**.
+
+   ![st008.png](media/st008.png)
+
+8. Click on **Add connection**.
+
+   ![st009.png](media/st009.png)
+
+9. Once the **AI Search is connected**, click on the **Close** button.
+
+   ![st09.png](media/st09.png)
+
+   > **Note:** If you're unable to see the Close option, try adjusting your screen resolution to 80% or 90%.
+
+   ![st09.png](media/resolution.png)
+
+10. Notice that **Azure Open AI** and **Azure AI Search** connections are established successfully.
+
+      ![st10.png](media/st10.png)
+
+---
+
+### Task 3.3: Setup and use Prompt Flow in Azure AI Studio
+
+Prompt flow in Azure AI Studio offers a comprehensive, streamlined environment for creating AI applications. It provides a visual interface for orchestrating flows, and enables iterative prompt engineering. Azure AI Studio includes built-in evaluation tools, seamless deployment options, and integration with Azure's ecosystem. It also offers enterprise-level security and scalability, making it ideal for developing, testing, and deploying sophisticated AI solutions efficiently. Let's explore how Contoso deployed and tested a Prompt flow.
+
+1. In the left navigation pane, click on **Go to Project** button.
+
+   ![st06.png](media/st06.png)
+
+2. Click on **Prompt flow** from the left navigation pane and then click on the **+ Create** button.
+
+   ![st11.png](media/st11.png)
+
+3. Scroll down and click on the **Upload** button in the Upload from local section.
+
+   ![31.png](media/31.png)
+
+4. Click on the **Zip file** radio button and then click on **Browse**.
+
+   ![32.1.png](media/32.1.png)
+
+5. Copy the path **C:\LabFiles\artifacts\artifacts\aistudio**, paste it in the **File name** textbox and then click on the **Open** button.
+
+   ![32.1.1.png](media/32.1.1.png)
+
+6. Click on **shopping-assistant-prompt-flow** and then click on the **Open** button.
+
+   ![promptziploc.png](media/promptziploc.png)
+
+7. In the Select flow type dropdown, select **Chat flow** and then click on the **Upload** button.
+
+   ![st12.png](media/st12.png)
+
+   >**Note:** If clicking on the Upload button doesn't redirect you to the Prompt Flow screen, click the Upload button again. If it still doesn't work, refresh the page and try uploading again.
+
+8. Once the prompt flow is uploaded, you'll see a **graph** view with connected nodes representing each step in the flow.
+
+   ![st12.png](media/newuu.png)
+
+9. Open a new tab, click on browser address bar, and copy paste the following web app link ``https://app-shopping-copilot-d1hz4ew.azurewebsites.net/`` and then press Enter.
 
     ```
-    Summarize the data, provide an executive summary, indicating important takeaways.
+    https://app-shopping-copilot-d1hz4ew.azurewebsites.net/
     ```
-    ![task-new16.png](media/labMedia/task-new16.png)
+      ![Contosoterms.1.png](media/Contosoterms.1.png)
 
-30. Click on the **Close** button in the pop-up window.
+10. Click on the **terms and conditions checkbox** and then click on the **Login** button.
 
-    ![close-copilot.png](media/labMedia/close-copilot.png)
+      ![Contosoterms.png](media/Contosoterms.png)
+ 
+11. Click on the **Copilot icon** at the bottom right of the page.
+ 
+      ![Copiloticonwebapp.png](media/Copiloticonwebapp.png)
 
-See how easy it was to get an executive summary with absolutely no IT resource dependency!
-
-The summary could also be generated in another language if specified. Additionally, the summary updates if you filter the report on any visual.
+12. Click on any of the **pre-populated questions**.
+ 
+      ![question1webapp.png](media/question1webapp.png)
+ 
+13. Observe the **response**.
+  
+      ![Answer1webapp.png](media/Answer1webapp.png)
+ 
+With their new Shopping Copilot, Contoso was able to provide their customers with an online shopping experience that has an in-store feel. This simulates a personalized shopping experience that helps increase customers' engagement with enhanced data insights.

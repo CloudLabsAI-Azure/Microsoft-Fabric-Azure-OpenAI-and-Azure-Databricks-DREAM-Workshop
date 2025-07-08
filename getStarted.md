@@ -2,8 +2,7 @@
 
 1. Once the **Environment** is provisioned, a virtual Machine (JumpVM/Bastion) and **Guide** gets loaded in your browser. Use this virtual Machine throughout the workshop to perform the lab. 
 
-   ![Started.](GetStarted/l1.png)
-
+   ![Started.](./media/l1.png)
 
 ### Familiarize yourself with the Lab Environment, before you begin!
 
@@ -30,13 +29,13 @@
 
 1. In the JumpVM/Bastion, **double click** on the **Azure Portal** shortcut of the Microsoft Edge browser on the desktop.
 
-   >**Note:** If the browser is not opening, **refresh** the main VM browser page.
+    >**Note:** If the browser is not opening, **refresh** the main VM browser page.
 
    ![Started.](GetStarted/Task6.png)
 
 2. If you see the pop-up notification to restore pages, click on  **"x"**  to close it.
 
-   ![Started.](GetStarted/Task7.png)
+    ![Started.](GetStarted/Task7.png)
 
 3. On the **Microsoft Azure** browser tab, paste the provided **Username**: **<inject key= "AzureAdUserEmail" enableCopy="true"/>**  to **Sign in** and click **Next**.
 
@@ -54,20 +53,10 @@
 
    ![Started.](GetStarted/signinpopup.png)
    
-   >**Note:** After logging into the Azure Portal, if a pop-up page titled **"Welcome to Microsoft Azure"** appears, click **Cancel** to skip the tour.
+    >**Note:** After logging into the Azure Portal, if a pop-up page titled **"Welcome to Microsoft Azure"** appears, click **Cancel** to skip the tour.
 
    ![Started.](GetStarted/welcometoms.png)
 
-7. Now, on the **Azure Portal** Dashboard, click on Search bar to search and select the Resource Group as **`rg-adb-fabric`**.
-   
-   ![Started.](GetStarted/1.png)
-
-
-   >**Note:** To ensure the **deployment is successful!** Verify that the **Resource Group** contains **8 resources**.
-
-   ![Started.](GetStarted/l6.png)
-
-This concludes the setup. You are now all set to explore the features and functionalities. Proceed to the next exercises, keeping the **Resource Group** tab open, and move forward with the next steps.
 
 # Support Contact
 
@@ -82,4 +71,4 @@ Learner Support Contacts:
 Now, click on Next from the lower right corner to move on to the next page.
 
 
-![4r](./GetStarted/step1.png)
+![4r](GetStarted/step1.png)
