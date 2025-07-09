@@ -1,5 +1,5 @@
 
-# Microsoft Fabric, Azure OpenAI and Azure Databricks DREAM Workshop
+# Modernize you data estate MS Fabric Azure Databricks and AI Foundry
 
 
 **DISCLAIMER**
