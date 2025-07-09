@@ -13,23 +13,23 @@
           "Order": 1
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/exercise1.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/Exercise1.md",
           "Order": 2
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/exercise2.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/Exercise2.md",
           "Order" : 3
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/exercise3.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/Exercise3.md",
           "Order": 4
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/exercise4.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/Exercise4.md",
           "Order" : 5
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/exercise6.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Microsoft-Fabric-Azure-OpenAI-and-Azure-Databricks-DREAM-Workshop/refs/heads/main/Exercise6.md",
           "Order" : 6
         }
       ]
