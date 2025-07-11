@@ -70,11 +70,11 @@ Exercise 2: Azure Databricks integration with Fabric: DLT Pipelines, Unity Catal
  - Task 2.2: Explore the data in the Azure Databricks environment with Unity Catalog (unified governance solution for data and AI)
  - Task 2.3: Create a Mirrored Azure Databricks Catalog in Fabric and analyze data using T-SQL
 
-Exercise 3: Building an AI-Powered Chatbot with Microsoft Fabric and Azure AI Studio
+Exercise 3: Building an AI-Powered Enterprise Chatbot with Microsoft Fabric and Azure AI Foundry
 
- - Task 3.1: Integrate Fabric data with Azure AI Studio using Azure AI Search
- - Task 3.2: Establish Azure OpenAI, Azure AI Content Safety, and AI Search Connections in Azure AI Studio
- - Task 3.3: Setup and use Prompt Flow in Azure AI Studio
+ - Task 3.1: Integrate Fabric data with Azure AI Foundry using Azure AI Search
+ - Task 3.2: Establish Azure OpenAI, Azure AI Content Safety, and AI Search Connections in Azure AI Foundry
+ - Task 3.3: Setup and use Prompt Flow in Azure AI Foundry
 
 **Optional exercises**
 
